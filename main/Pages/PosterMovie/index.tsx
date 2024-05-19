@@ -79,6 +79,7 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontSize: 24,
     fontWeight: '700',
+    fontFamily : 'Josefin-Slab'
   },
   resultsContainer: {
     padding: 10,

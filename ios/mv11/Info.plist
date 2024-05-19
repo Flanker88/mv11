@@ -36,7 +36,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -51,5 +51,22 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>josefin-slab-latin-100-italic.ttf</string>
+		<string>josefin-slab-latin-100-normal.ttf</string>
+		<string>josefin-slab-latin-200-italic.ttf</string>
+		<string>josefin-slab-latin-200-normal.ttf</string>
+		<string>josefin-slab-latin-300-italic.ttf</string>
+		<string>josefin-slab-latin-300-normal.ttf</string>
+		<string>josefin-slab-latin-400-italic.ttf</string>
+		<string>josefin-slab-latin-400-normal.ttf</string>
+		<string>josefin-slab-latin-500-italic.ttf</string>
+		<string>josefin-slab-latin-500-normal.ttf</string>
+		<string>josefin-slab-latin-600-italic.ttf</string>
+		<string>josefin-slab-latin-600-normal.ttf</string>
+		<string>josefin-slab-latin-700-italic.ttf</string>
+		<string>josefin-slab-latin-700-normal.ttf</string>
+	</array>
 </dict>
 </plist>
