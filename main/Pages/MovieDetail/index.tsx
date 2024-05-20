@@ -48,7 +48,7 @@ const MovieDetail = ({ route }) => {
           <ScrollView style={styles.topContainer}>
           <TouchableOpacity style={styles.back} onPress={() => navigation.goBack()}>
           <Image source={require('../../Assets/Movie/arrow-left.png')} />
-        </TouchableOpacity>
+          </TouchableOpacity>
             <Text style={styles.title}>{data.title}</Text>
             <View style={styles.castContainer}>
               <Text style={styles.castName}>{castNames}</Text>
@@ -73,9 +73,14 @@ const MovieDetail = ({ route }) => {
               showsHorizontalScrollIndicator={false}
               contentContainerStyle={styles.flatListContent}
             />
+            <TouchableOpacity style={styles.download}>
+              <Image source={require('../../Assets/Movie/download.png')} />
+              <Text style={styles.textdown}>Download</Text>
+            </TouchableOpacity>
           </View>
         </>
       )}
+      
     </View>
   );
 };
@@ -91,6 +96,7 @@ const styles = StyleSheet.create({
     marginLeft : 20,
     marginTop : 20,
     position : 'absolute',
+    zIndex: 10,
   },
   loader: {
     flex: 1,
@@ -152,6 +158,15 @@ const styles = StyleSheet.create({
   },
   flatListContent: {
     paddingVertical: 20,
+  },
+  download : {
+    alignItems : 'center'
+  },
+  textdown : {
+    position : 'absolute',
+    marginTop : 25,
+    fontSize : 16,
+    fontWeight : '700'
   },
   errorText: {
     color: '#ff0000',
