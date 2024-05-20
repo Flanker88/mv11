@@ -7,6 +7,7 @@ import SlideShow from './Pages/SlideShow';
 import Home from './Pages/Home';
 import MakeSlideShow from './Pages/MakeSlideShow';
 import MovieDetail from './Pages/MovieDetail';
+import ImageScreen from './Pages/ImageScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +32,13 @@ const Main = () => {
         <Stack.Screen 
         name="MovieDetail" 
         component={MovieDetail}
+        options={{
+          headerShown: false,
+        }} 
+        />
+        <Stack.Screen 
+        name="ImageScreen" 
+        component={ImageScreen}
         options={{
           headerShown: false,
         }} 

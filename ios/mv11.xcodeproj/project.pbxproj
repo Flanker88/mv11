@@ -14,49 +14,49 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-mv11-mv11Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-mv11-mv11Tests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		9EA8B1E3A84F476D92C4C378 /* josefin-slab-latin-100-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A45C6CE6F3544C43AD9ECEF7 /* josefin-slab-latin-100-italic.ttf */; };
-		89DF4C396CAC41A69703E4F4 /* josefin-slab-latin-100-normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D5130EB4A4E244E38187AACD /* josefin-slab-latin-100-normal.ttf */; };
-		838B77022B99416F8701B7FC /* josefin-slab-latin-200-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B589F1186BDA473E98DE04C6 /* josefin-slab-latin-200-italic.ttf */; };
-		3B200FCE9E0043709AACD0DD /* josefin-slab-latin-200-normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04B6DD24AB4F487786B1942D /* josefin-slab-latin-200-normal.ttf */; };
-		8DDDD8CA5F414F71BA8CE502 /* josefin-slab-latin-300-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EDA19DBBF604C2B90B8E768 /* josefin-slab-latin-300-italic.ttf */; };
-		49C39ADF714E4E1393A115C9 /* josefin-slab-latin-300-normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181554608A5E45E7B3FC4DC2 /* josefin-slab-latin-300-normal.ttf */; };
-		92B5426392B94C278D6D4610 /* josefin-slab-latin-400-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A9D8C9637044EF796736F14 /* josefin-slab-latin-400-italic.ttf */; };
-		40B93DAEABBE42C491BA7B0E /* josefin-slab-latin-400-normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B768F3069194D25890749EB /* josefin-slab-latin-400-normal.ttf */; };
-		94EF3F6EA4D94CB5A9759E3E /* josefin-slab-latin-500-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 070B3CE159064F1C8BA2244B /* josefin-slab-latin-500-italic.ttf */; };
-		FC25B21644DB431BB6B8D48F /* josefin-slab-latin-500-normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94F0BCF850774214AA25FAF8 /* josefin-slab-latin-500-normal.ttf */; };
-		35CBDF0C26A34984BF3B0B74 /* josefin-slab-latin-600-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE957C4E91344D43BA9C76AF /* josefin-slab-latin-600-italic.ttf */; };
-		36ACBEB7059E474BA0B1C249 /* josefin-slab-latin-600-normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF5288E357684BDDB3B055EF /* josefin-slab-latin-600-normal.ttf */; };
-		137871BAF9714F5B9CE0FF74 /* josefin-slab-latin-700-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB41C69AA18D4BF290680914 /* josefin-slab-latin-700-italic.ttf */; };
-		E57287D282304847A2364588 /* josefin-slab-latin-700-normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AAAA7C4EFFA4D71ABDEF2E4 /* josefin-slab-latin-700-normal.ttf */; };
-		66EB520AE51445709AEFD6C0 /* josefin-slab-latin-100-italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 6EAA90E8BB7E47BFAF95176C /* josefin-slab-latin-100-italic.woff */; };
-		9221F84CBEE944C0B7C32426 /* josefin-slab-latin-100-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 2F55885E81754BEF8DB5FBC5 /* josefin-slab-latin-100-italic.woff2 */; };
-		F1A8DA26FF384B57A9C10189 /* josefin-slab-latin-100-normal.woff in Resources */ = {isa = PBXBuildFile; fileRef = 9B237214D10141E1AE5D3B0F /* josefin-slab-latin-100-normal.woff */; };
-		EFD8C01CA6344EBAAFF606C4 /* josefin-slab-latin-100-normal.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 092C29C83FBF439C9C808139 /* josefin-slab-latin-100-normal.woff2 */; };
-		C873DADBB4D943BC92A93598 /* josefin-slab-latin-200-italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 27EA22B8727F4199B6EBD6A7 /* josefin-slab-latin-200-italic.woff */; };
-		755E8718BB484E8DAB735A57 /* josefin-slab-latin-200-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 413CE99B205A4A92B860C8B9 /* josefin-slab-latin-200-italic.woff2 */; };
-		DEC42113527E4D81908AEF92 /* josefin-slab-latin-200-normal.woff in Resources */ = {isa = PBXBuildFile; fileRef = 6DCC2062E2664608BC033ED7 /* josefin-slab-latin-200-normal.woff */; };
-		1604D87640DD44519A1F1589 /* josefin-slab-latin-200-normal.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = AC4CFE3B04E8438BB9F70B87 /* josefin-slab-latin-200-normal.woff2 */; };
-		68F3CD73C4D14AACBAD27228 /* josefin-slab-latin-300-italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = C2D8CA6840DB425288D2B662 /* josefin-slab-latin-300-italic.woff */; };
-		53E84B10E9DB4224B69863D5 /* josefin-slab-latin-300-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7FC55A110D0F45A68905547A /* josefin-slab-latin-300-italic.woff2 */; };
-		39B8919A2525406CAB2FD868 /* josefin-slab-latin-300-normal.woff in Resources */ = {isa = PBXBuildFile; fileRef = F6144D27C3664C819ADA34FA /* josefin-slab-latin-300-normal.woff */; };
-		93EFACF204814375BC88B962 /* josefin-slab-latin-300-normal.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 6FDCABF9938549F5B350890F /* josefin-slab-latin-300-normal.woff2 */; };
-		68C3B0E10C754F5A96E100C1 /* josefin-slab-latin-400-italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 756CD1F7718E4EF1A8E9840D /* josefin-slab-latin-400-italic.woff */; };
-		EFEED76C6F2C4679BA1B55A8 /* josefin-slab-latin-400-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 9DC7E08C91484199AA0ABF11 /* josefin-slab-latin-400-italic.woff2 */; };
-		E1790F51E212473395BC51CF /* josefin-slab-latin-400-normal.woff in Resources */ = {isa = PBXBuildFile; fileRef = 6D85DF9511B64ADEA54D0ABA /* josefin-slab-latin-400-normal.woff */; };
-		861EAD684E094F85A427C569 /* josefin-slab-latin-400-normal.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 306D270338264699AA5A75C9 /* josefin-slab-latin-400-normal.woff2 */; };
-		EE616EA04784469CAB71D09C /* josefin-slab-latin-500-italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 90EAD2898AC24A9D83E51CED /* josefin-slab-latin-500-italic.woff */; };
-		728992693BB144CA818DFA36 /* josefin-slab-latin-500-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = AE1E4085B6F24ABCBC121CB7 /* josefin-slab-latin-500-italic.woff2 */; };
-		56A75AD42BDF4903B1A79739 /* josefin-slab-latin-500-normal.woff in Resources */ = {isa = PBXBuildFile; fileRef = 3072A4C08EC2487AB524314C /* josefin-slab-latin-500-normal.woff */; };
-		A1839CA1475B4909B402A78E /* josefin-slab-latin-500-normal.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7A71060FB51746168BD4CFC1 /* josefin-slab-latin-500-normal.woff2 */; };
-		BE32CA09526A4002B47173F7 /* josefin-slab-latin-600-italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 44C4A8CF5898420FB195207F /* josefin-slab-latin-600-italic.woff */; };
-		199680A576A548C5B4E4C6F4 /* josefin-slab-latin-600-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 1866605FEC6C4291B7440B83 /* josefin-slab-latin-600-italic.woff2 */; };
-		B34F9889240E4CDD86A208BF /* josefin-slab-latin-600-normal.woff in Resources */ = {isa = PBXBuildFile; fileRef = C077E7F5A2CE40E0AEEA385D /* josefin-slab-latin-600-normal.woff */; };
-		7928E9B8268744A5AB577CBF /* josefin-slab-latin-600-normal.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = C5ACAD4B08CE4C959C4140C6 /* josefin-slab-latin-600-normal.woff2 */; };
-		170A17E561CD4C70A1FEF70F /* josefin-slab-latin-700-italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7B66C9F5847E492EB89633EA /* josefin-slab-latin-700-italic.woff */; };
-		F4FC8C49CC184103A9004530 /* josefin-slab-latin-700-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 7ACF2035BB6846B2B283AADB /* josefin-slab-latin-700-italic.woff2 */; };
-		752DA4F680FD4C65A97D3937 /* josefin-slab-latin-700-normal.woff in Resources */ = {isa = PBXBuildFile; fileRef = 90535E49EB83401CA3E563C7 /* josefin-slab-latin-700-normal.woff */; };
-		94A558F6A4FB4976817E8288 /* josefin-slab-latin-700-normal.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 5760034699AA43D8B5C26B75 /* josefin-slab-latin-700-normal.woff2 */; };
-		AA9003A788BE44AA9C51096B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 33AEA4C90F004196BA87D3D7 /* LICENSE */; };
+		62088019F21F430AB74FD46D /* josefin-slab-latin-100-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0B5A2079FBF41429BD14CA6 /* josefin-slab-latin-100-italic.ttf */; };
+		6C0FA3E5776A4EF09B65B4B0 /* josefin-slab-latin-100-normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2F181E205A84D1B9630019A /* josefin-slab-latin-100-normal.ttf */; };
+		46E668357D7E45D7B08036D9 /* josefin-slab-latin-200-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4393912F5C794644AC73F5C9 /* josefin-slab-latin-200-italic.ttf */; };
+		5CC1764CF58F4D4FB0E9C020 /* josefin-slab-latin-200-normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B26C642D75A54760B08B4205 /* josefin-slab-latin-200-normal.ttf */; };
+		223672AAED9246E885996D6F /* josefin-slab-latin-300-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 363745F4D1DA42F1B4746D3D /* josefin-slab-latin-300-italic.ttf */; };
+		3A9D77C0F2EB4FF380BD7E8E /* josefin-slab-latin-300-normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04563430F326407E8F79EE88 /* josefin-slab-latin-300-normal.ttf */; };
+		E173E11E475F467A839CFD99 /* josefin-slab-latin-400-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CB0D80DBA2642BFAA06ED91 /* josefin-slab-latin-400-italic.ttf */; };
+		1CF49AC9589644C197AE7925 /* josefin-slab-latin-400-normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E32D1C7FFD54149BD68DBBA /* josefin-slab-latin-400-normal.ttf */; };
+		3747406E4B9A42A48163BF82 /* josefin-slab-latin-500-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB6910AC463941F7BB60F0D6 /* josefin-slab-latin-500-italic.ttf */; };
+		175BEF95D7C4444B92AF40BA /* josefin-slab-latin-500-normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0343D0B0AB584BB598F365E1 /* josefin-slab-latin-500-normal.ttf */; };
+		4FDDADFE89954E22B1CF2028 /* josefin-slab-latin-600-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B41421DF894C4AEB86D4D8B2 /* josefin-slab-latin-600-italic.ttf */; };
+		B5BD8A7228F14F6C9DD59BCF /* josefin-slab-latin-600-normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCE790A10EB74250A257929F /* josefin-slab-latin-600-normal.ttf */; };
+		EC8A652AC34B482686474ECA /* josefin-slab-latin-700-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AF2B0F93E2F4708A267E9F6 /* josefin-slab-latin-700-italic.ttf */; };
+		B5A0623C52984ABF9DFBEBA5 /* josefin-slab-latin-700-normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96FF390B7B5C455A8DF79700 /* josefin-slab-latin-700-normal.ttf */; };
+		F74D8352368E46498BFD2020 /* josefin-slab-latin-100-italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 3679991B7FA347BBA6BA29FC /* josefin-slab-latin-100-italic.woff */; };
+		59B1AB6742FA4A5F954755EA /* josefin-slab-latin-100-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 382B6710D1304CBF90D0D0CB /* josefin-slab-latin-100-italic.woff2 */; };
+		04FDC3663BF947E496C76B97 /* josefin-slab-latin-100-normal.woff in Resources */ = {isa = PBXBuildFile; fileRef = 8D7D10D8990A4BBAAD7A7D86 /* josefin-slab-latin-100-normal.woff */; };
+		04834D211D0A49BBBEDE9378 /* josefin-slab-latin-100-normal.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = B6B5687B732A4454A63E3F5E /* josefin-slab-latin-100-normal.woff2 */; };
+		E52A4CAD2F1D4B65A7901B90 /* josefin-slab-latin-200-italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = F59AF58E77A04A0999216A2A /* josefin-slab-latin-200-italic.woff */; };
+		FED61E80A2574A678DB8E40B /* josefin-slab-latin-200-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = F9128E452572422AA7E2C540 /* josefin-slab-latin-200-italic.woff2 */; };
+		4F04F772BF5145A3AE524130 /* josefin-slab-latin-200-normal.woff in Resources */ = {isa = PBXBuildFile; fileRef = 4944FE455C1B40139239751B /* josefin-slab-latin-200-normal.woff */; };
+		A36D7EAD764F4625ACA58C3C /* josefin-slab-latin-200-normal.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 1F784A5881F54FCFA2EA0D13 /* josefin-slab-latin-200-normal.woff2 */; };
+		95464D989F9442398373BE65 /* josefin-slab-latin-300-italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 80BFD713407C46D481664641 /* josefin-slab-latin-300-italic.woff */; };
+		8F2910258EE7447A9D1ED643 /* josefin-slab-latin-300-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = B88CA8ADA967444A832DF133 /* josefin-slab-latin-300-italic.woff2 */; };
+		75AAE5CF0AC04E76B47D54B3 /* josefin-slab-latin-300-normal.woff in Resources */ = {isa = PBXBuildFile; fileRef = DBB0AAE3092F4FCEB30986DC /* josefin-slab-latin-300-normal.woff */; };
+		AD4D898CB4274986AF3EDCA8 /* josefin-slab-latin-300-normal.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 30EA6BDECF55477FA88F3786 /* josefin-slab-latin-300-normal.woff2 */; };
+		5A75373898D7447CB9D81336 /* josefin-slab-latin-400-italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 69D3F9999D734BE28468847F /* josefin-slab-latin-400-italic.woff */; };
+		F9CC660491AA4B7B8926AA35 /* josefin-slab-latin-400-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 651C2A22AD3842D899942756 /* josefin-slab-latin-400-italic.woff2 */; };
+		2EC2AEA807F340B7A2A4641D /* josefin-slab-latin-400-normal.woff in Resources */ = {isa = PBXBuildFile; fileRef = 872EF06204354B3188EB6816 /* josefin-slab-latin-400-normal.woff */; };
+		5BA050CFFF4C42628B55FD20 /* josefin-slab-latin-400-normal.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = A7389C36516A415980B54052 /* josefin-slab-latin-400-normal.woff2 */; };
+		E14132240200494F80B913B9 /* josefin-slab-latin-500-italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 303D7536BAE14EEE9D80A152 /* josefin-slab-latin-500-italic.woff */; };
+		2B2712149EA040FB8FB39223 /* josefin-slab-latin-500-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 6FB5BE5A575E426A8D8292CB /* josefin-slab-latin-500-italic.woff2 */; };
+		30A7D1AB19324C80A46E1A1C /* josefin-slab-latin-500-normal.woff in Resources */ = {isa = PBXBuildFile; fileRef = EC5586DB84344487B034E16B /* josefin-slab-latin-500-normal.woff */; };
+		2603E18F2CF14381A4F8C091 /* josefin-slab-latin-500-normal.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 345200A5F7C943948865F3F6 /* josefin-slab-latin-500-normal.woff2 */; };
+		7CD9B0BFACB742DD86114548 /* josefin-slab-latin-600-italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = 2AD7626CC9E34D0C86AAB8FE /* josefin-slab-latin-600-italic.woff */; };
+		1D91860FDDBF4B64A678CD75 /* josefin-slab-latin-600-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 6A70124781484C699A9A1455 /* josefin-slab-latin-600-italic.woff2 */; };
+		A9B3A4F7C5EE46899EC52542 /* josefin-slab-latin-600-normal.woff in Resources */ = {isa = PBXBuildFile; fileRef = B2099C27C39E44B7A2B0EF48 /* josefin-slab-latin-600-normal.woff */; };
+		5C66677F2D044532857AF2A2 /* josefin-slab-latin-600-normal.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 1649EED7318C4697A53EA9C4 /* josefin-slab-latin-600-normal.woff2 */; };
+		864F99587C3A44A69C3D6CC8 /* josefin-slab-latin-700-italic.woff in Resources */ = {isa = PBXBuildFile; fileRef = CC9A6FFECA2F47058EA84A33 /* josefin-slab-latin-700-italic.woff */; };
+		8569B7B18F404058AC201F2A /* josefin-slab-latin-700-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 21CFB517F54D479E99C437DE /* josefin-slab-latin-700-italic.woff2 */; };
+		9E7AC47907F4456ABEF6E061 /* josefin-slab-latin-700-normal.woff in Resources */ = {isa = PBXBuildFile; fileRef = FA84FDCBE2BB40C1B43F7110 /* josefin-slab-latin-700-normal.woff */; };
+		E3875B180AC842E5BCF1D8B6 /* josefin-slab-latin-700-normal.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 848AF52D428C40CE99F35F1D /* josefin-slab-latin-700-normal.woff2 */; };
+		F7486A60106C43E6912F40B4 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CA0EE86452E14597B80A7586 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,49 +88,49 @@
 		89C6BE57DB24E9ADA2F236DE /* Pods-mv11-mv11Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mv11-mv11Tests.release.xcconfig"; path = "Target Support Files/Pods-mv11-mv11Tests/Pods-mv11-mv11Tests.release.xcconfig"; sourceTree = "<group>"; };
 		CD42C8902BDBCB100036610F /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = mv11/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		A45C6CE6F3544C43AD9ECEF7 /* josefin-slab-latin-100-italic.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-100-italic.ttf"; path = "../main/Assets/Fonts/josefin-slab-latin-100-italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D5130EB4A4E244E38187AACD /* josefin-slab-latin-100-normal.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-100-normal.ttf"; path = "../main/Assets/Fonts/josefin-slab-latin-100-normal.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B589F1186BDA473E98DE04C6 /* josefin-slab-latin-200-italic.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-200-italic.ttf"; path = "../main/Assets/Fonts/josefin-slab-latin-200-italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		04B6DD24AB4F487786B1942D /* josefin-slab-latin-200-normal.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-200-normal.ttf"; path = "../main/Assets/Fonts/josefin-slab-latin-200-normal.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0EDA19DBBF604C2B90B8E768 /* josefin-slab-latin-300-italic.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-300-italic.ttf"; path = "../main/Assets/Fonts/josefin-slab-latin-300-italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		181554608A5E45E7B3FC4DC2 /* josefin-slab-latin-300-normal.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-300-normal.ttf"; path = "../main/Assets/Fonts/josefin-slab-latin-300-normal.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0A9D8C9637044EF796736F14 /* josefin-slab-latin-400-italic.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-400-italic.ttf"; path = "../main/Assets/Fonts/josefin-slab-latin-400-italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		1B768F3069194D25890749EB /* josefin-slab-latin-400-normal.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-400-normal.ttf"; path = "../main/Assets/Fonts/josefin-slab-latin-400-normal.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		070B3CE159064F1C8BA2244B /* josefin-slab-latin-500-italic.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-500-italic.ttf"; path = "../main/Assets/Fonts/josefin-slab-latin-500-italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		94F0BCF850774214AA25FAF8 /* josefin-slab-latin-500-normal.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-500-normal.ttf"; path = "../main/Assets/Fonts/josefin-slab-latin-500-normal.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		DE957C4E91344D43BA9C76AF /* josefin-slab-latin-600-italic.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-600-italic.ttf"; path = "../main/Assets/Fonts/josefin-slab-latin-600-italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		EF5288E357684BDDB3B055EF /* josefin-slab-latin-600-normal.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-600-normal.ttf"; path = "../main/Assets/Fonts/josefin-slab-latin-600-normal.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		FB41C69AA18D4BF290680914 /* josefin-slab-latin-700-italic.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-700-italic.ttf"; path = "../main/Assets/Fonts/josefin-slab-latin-700-italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0AAAA7C4EFFA4D71ABDEF2E4 /* josefin-slab-latin-700-normal.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-700-normal.ttf"; path = "../main/Assets/Fonts/josefin-slab-latin-700-normal.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6EAA90E8BB7E47BFAF95176C /* josefin-slab-latin-100-italic.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-100-italic.woff"; path = "../main/Assets/Fonts/josefin-slab-latin-100-italic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		2F55885E81754BEF8DB5FBC5 /* josefin-slab-latin-100-italic.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-100-italic.woff2"; path = "../main/Assets/Fonts/josefin-slab-latin-100-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		9B237214D10141E1AE5D3B0F /* josefin-slab-latin-100-normal.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-100-normal.woff"; path = "../main/Assets/Fonts/josefin-slab-latin-100-normal.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		092C29C83FBF439C9C808139 /* josefin-slab-latin-100-normal.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-100-normal.woff2"; path = "../main/Assets/Fonts/josefin-slab-latin-100-normal.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		27EA22B8727F4199B6EBD6A7 /* josefin-slab-latin-200-italic.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-200-italic.woff"; path = "../main/Assets/Fonts/josefin-slab-latin-200-italic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		413CE99B205A4A92B860C8B9 /* josefin-slab-latin-200-italic.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-200-italic.woff2"; path = "../main/Assets/Fonts/josefin-slab-latin-200-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6DCC2062E2664608BC033ED7 /* josefin-slab-latin-200-normal.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-200-normal.woff"; path = "../main/Assets/Fonts/josefin-slab-latin-200-normal.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		AC4CFE3B04E8438BB9F70B87 /* josefin-slab-latin-200-normal.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-200-normal.woff2"; path = "../main/Assets/Fonts/josefin-slab-latin-200-normal.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C2D8CA6840DB425288D2B662 /* josefin-slab-latin-300-italic.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-300-italic.woff"; path = "../main/Assets/Fonts/josefin-slab-latin-300-italic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		7FC55A110D0F45A68905547A /* josefin-slab-latin-300-italic.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-300-italic.woff2"; path = "../main/Assets/Fonts/josefin-slab-latin-300-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F6144D27C3664C819ADA34FA /* josefin-slab-latin-300-normal.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-300-normal.woff"; path = "../main/Assets/Fonts/josefin-slab-latin-300-normal.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6FDCABF9938549F5B350890F /* josefin-slab-latin-300-normal.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-300-normal.woff2"; path = "../main/Assets/Fonts/josefin-slab-latin-300-normal.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		756CD1F7718E4EF1A8E9840D /* josefin-slab-latin-400-italic.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-400-italic.woff"; path = "../main/Assets/Fonts/josefin-slab-latin-400-italic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		9DC7E08C91484199AA0ABF11 /* josefin-slab-latin-400-italic.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-400-italic.woff2"; path = "../main/Assets/Fonts/josefin-slab-latin-400-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6D85DF9511B64ADEA54D0ABA /* josefin-slab-latin-400-normal.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-400-normal.woff"; path = "../main/Assets/Fonts/josefin-slab-latin-400-normal.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		306D270338264699AA5A75C9 /* josefin-slab-latin-400-normal.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-400-normal.woff2"; path = "../main/Assets/Fonts/josefin-slab-latin-400-normal.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		90EAD2898AC24A9D83E51CED /* josefin-slab-latin-500-italic.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-500-italic.woff"; path = "../main/Assets/Fonts/josefin-slab-latin-500-italic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		AE1E4085B6F24ABCBC121CB7 /* josefin-slab-latin-500-italic.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-500-italic.woff2"; path = "../main/Assets/Fonts/josefin-slab-latin-500-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		3072A4C08EC2487AB524314C /* josefin-slab-latin-500-normal.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-500-normal.woff"; path = "../main/Assets/Fonts/josefin-slab-latin-500-normal.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		7A71060FB51746168BD4CFC1 /* josefin-slab-latin-500-normal.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-500-normal.woff2"; path = "../main/Assets/Fonts/josefin-slab-latin-500-normal.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		44C4A8CF5898420FB195207F /* josefin-slab-latin-600-italic.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-600-italic.woff"; path = "../main/Assets/Fonts/josefin-slab-latin-600-italic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		1866605FEC6C4291B7440B83 /* josefin-slab-latin-600-italic.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-600-italic.woff2"; path = "../main/Assets/Fonts/josefin-slab-latin-600-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C077E7F5A2CE40E0AEEA385D /* josefin-slab-latin-600-normal.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-600-normal.woff"; path = "../main/Assets/Fonts/josefin-slab-latin-600-normal.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C5ACAD4B08CE4C959C4140C6 /* josefin-slab-latin-600-normal.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-600-normal.woff2"; path = "../main/Assets/Fonts/josefin-slab-latin-600-normal.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		7B66C9F5847E492EB89633EA /* josefin-slab-latin-700-italic.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-700-italic.woff"; path = "../main/Assets/Fonts/josefin-slab-latin-700-italic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		7ACF2035BB6846B2B283AADB /* josefin-slab-latin-700-italic.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-700-italic.woff2"; path = "../main/Assets/Fonts/josefin-slab-latin-700-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		90535E49EB83401CA3E563C7 /* josefin-slab-latin-700-normal.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-700-normal.woff"; path = "../main/Assets/Fonts/josefin-slab-latin-700-normal.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5760034699AA43D8B5C26B75 /* josefin-slab-latin-700-normal.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-700-normal.woff2"; path = "../main/Assets/Fonts/josefin-slab-latin-700-normal.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		33AEA4C90F004196BA87D3D7 /* LICENSE */ = {isa = PBXFileReference; name = "LICENSE"; path = "../main/Assets/Fonts/LICENSE"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C0B5A2079FBF41429BD14CA6 /* josefin-slab-latin-100-italic.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-100-italic.ttf"; path = "../main/Assets/font/josefin-slab-latin-100-italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F2F181E205A84D1B9630019A /* josefin-slab-latin-100-normal.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-100-normal.ttf"; path = "../main/Assets/font/josefin-slab-latin-100-normal.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4393912F5C794644AC73F5C9 /* josefin-slab-latin-200-italic.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-200-italic.ttf"; path = "../main/Assets/font/josefin-slab-latin-200-italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B26C642D75A54760B08B4205 /* josefin-slab-latin-200-normal.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-200-normal.ttf"; path = "../main/Assets/font/josefin-slab-latin-200-normal.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		363745F4D1DA42F1B4746D3D /* josefin-slab-latin-300-italic.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-300-italic.ttf"; path = "../main/Assets/font/josefin-slab-latin-300-italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		04563430F326407E8F79EE88 /* josefin-slab-latin-300-normal.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-300-normal.ttf"; path = "../main/Assets/font/josefin-slab-latin-300-normal.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2CB0D80DBA2642BFAA06ED91 /* josefin-slab-latin-400-italic.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-400-italic.ttf"; path = "../main/Assets/font/josefin-slab-latin-400-italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3E32D1C7FFD54149BD68DBBA /* josefin-slab-latin-400-normal.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-400-normal.ttf"; path = "../main/Assets/font/josefin-slab-latin-400-normal.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AB6910AC463941F7BB60F0D6 /* josefin-slab-latin-500-italic.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-500-italic.ttf"; path = "../main/Assets/font/josefin-slab-latin-500-italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0343D0B0AB584BB598F365E1 /* josefin-slab-latin-500-normal.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-500-normal.ttf"; path = "../main/Assets/font/josefin-slab-latin-500-normal.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B41421DF894C4AEB86D4D8B2 /* josefin-slab-latin-600-italic.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-600-italic.ttf"; path = "../main/Assets/font/josefin-slab-latin-600-italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DCE790A10EB74250A257929F /* josefin-slab-latin-600-normal.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-600-normal.ttf"; path = "../main/Assets/font/josefin-slab-latin-600-normal.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8AF2B0F93E2F4708A267E9F6 /* josefin-slab-latin-700-italic.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-700-italic.ttf"; path = "../main/Assets/font/josefin-slab-latin-700-italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		96FF390B7B5C455A8DF79700 /* josefin-slab-latin-700-normal.ttf */ = {isa = PBXFileReference; name = "josefin-slab-latin-700-normal.ttf"; path = "../main/Assets/font/josefin-slab-latin-700-normal.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3679991B7FA347BBA6BA29FC /* josefin-slab-latin-100-italic.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-100-italic.woff"; path = "../main/Assets/font/josefin-slab-latin-100-italic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		382B6710D1304CBF90D0D0CB /* josefin-slab-latin-100-italic.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-100-italic.woff2"; path = "../main/Assets/font/josefin-slab-latin-100-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8D7D10D8990A4BBAAD7A7D86 /* josefin-slab-latin-100-normal.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-100-normal.woff"; path = "../main/Assets/font/josefin-slab-latin-100-normal.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B6B5687B732A4454A63E3F5E /* josefin-slab-latin-100-normal.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-100-normal.woff2"; path = "../main/Assets/font/josefin-slab-latin-100-normal.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F59AF58E77A04A0999216A2A /* josefin-slab-latin-200-italic.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-200-italic.woff"; path = "../main/Assets/font/josefin-slab-latin-200-italic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F9128E452572422AA7E2C540 /* josefin-slab-latin-200-italic.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-200-italic.woff2"; path = "../main/Assets/font/josefin-slab-latin-200-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4944FE455C1B40139239751B /* josefin-slab-latin-200-normal.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-200-normal.woff"; path = "../main/Assets/font/josefin-slab-latin-200-normal.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1F784A5881F54FCFA2EA0D13 /* josefin-slab-latin-200-normal.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-200-normal.woff2"; path = "../main/Assets/font/josefin-slab-latin-200-normal.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		80BFD713407C46D481664641 /* josefin-slab-latin-300-italic.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-300-italic.woff"; path = "../main/Assets/font/josefin-slab-latin-300-italic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B88CA8ADA967444A832DF133 /* josefin-slab-latin-300-italic.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-300-italic.woff2"; path = "../main/Assets/font/josefin-slab-latin-300-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DBB0AAE3092F4FCEB30986DC /* josefin-slab-latin-300-normal.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-300-normal.woff"; path = "../main/Assets/font/josefin-slab-latin-300-normal.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		30EA6BDECF55477FA88F3786 /* josefin-slab-latin-300-normal.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-300-normal.woff2"; path = "../main/Assets/font/josefin-slab-latin-300-normal.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		69D3F9999D734BE28468847F /* josefin-slab-latin-400-italic.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-400-italic.woff"; path = "../main/Assets/font/josefin-slab-latin-400-italic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		651C2A22AD3842D899942756 /* josefin-slab-latin-400-italic.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-400-italic.woff2"; path = "../main/Assets/font/josefin-slab-latin-400-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		872EF06204354B3188EB6816 /* josefin-slab-latin-400-normal.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-400-normal.woff"; path = "../main/Assets/font/josefin-slab-latin-400-normal.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A7389C36516A415980B54052 /* josefin-slab-latin-400-normal.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-400-normal.woff2"; path = "../main/Assets/font/josefin-slab-latin-400-normal.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		303D7536BAE14EEE9D80A152 /* josefin-slab-latin-500-italic.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-500-italic.woff"; path = "../main/Assets/font/josefin-slab-latin-500-italic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6FB5BE5A575E426A8D8292CB /* josefin-slab-latin-500-italic.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-500-italic.woff2"; path = "../main/Assets/font/josefin-slab-latin-500-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EC5586DB84344487B034E16B /* josefin-slab-latin-500-normal.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-500-normal.woff"; path = "../main/Assets/font/josefin-slab-latin-500-normal.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		345200A5F7C943948865F3F6 /* josefin-slab-latin-500-normal.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-500-normal.woff2"; path = "../main/Assets/font/josefin-slab-latin-500-normal.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2AD7626CC9E34D0C86AAB8FE /* josefin-slab-latin-600-italic.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-600-italic.woff"; path = "../main/Assets/font/josefin-slab-latin-600-italic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6A70124781484C699A9A1455 /* josefin-slab-latin-600-italic.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-600-italic.woff2"; path = "../main/Assets/font/josefin-slab-latin-600-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B2099C27C39E44B7A2B0EF48 /* josefin-slab-latin-600-normal.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-600-normal.woff"; path = "../main/Assets/font/josefin-slab-latin-600-normal.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1649EED7318C4697A53EA9C4 /* josefin-slab-latin-600-normal.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-600-normal.woff2"; path = "../main/Assets/font/josefin-slab-latin-600-normal.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CC9A6FFECA2F47058EA84A33 /* josefin-slab-latin-700-italic.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-700-italic.woff"; path = "../main/Assets/font/josefin-slab-latin-700-italic.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		21CFB517F54D479E99C437DE /* josefin-slab-latin-700-italic.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-700-italic.woff2"; path = "../main/Assets/font/josefin-slab-latin-700-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FA84FDCBE2BB40C1B43F7110 /* josefin-slab-latin-700-normal.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-700-normal.woff"; path = "../main/Assets/font/josefin-slab-latin-700-normal.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		848AF52D428C40CE99F35F1D /* josefin-slab-latin-700-normal.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-700-normal.woff2"; path = "../main/Assets/font/josefin-slab-latin-700-normal.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CA0EE86452E14597B80A7586 /* LICENSE */ = {isa = PBXFileReference; name = "LICENSE"; path = "../main/Assets/font/LICENSE"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,49 +240,49 @@
 		5AAF86A8AE1F4E679AD43C0C /* Resources */ = {
 			isa = "PBXGroup";
 			children = (
-				A45C6CE6F3544C43AD9ECEF7 /* josefin-slab-latin-100-italic.ttf */,
-				D5130EB4A4E244E38187AACD /* josefin-slab-latin-100-normal.ttf */,
-				B589F1186BDA473E98DE04C6 /* josefin-slab-latin-200-italic.ttf */,
-				04B6DD24AB4F487786B1942D /* josefin-slab-latin-200-normal.ttf */,
-				0EDA19DBBF604C2B90B8E768 /* josefin-slab-latin-300-italic.ttf */,
-				181554608A5E45E7B3FC4DC2 /* josefin-slab-latin-300-normal.ttf */,
-				0A9D8C9637044EF796736F14 /* josefin-slab-latin-400-italic.ttf */,
-				1B768F3069194D25890749EB /* josefin-slab-latin-400-normal.ttf */,
-				070B3CE159064F1C8BA2244B /* josefin-slab-latin-500-italic.ttf */,
-				94F0BCF850774214AA25FAF8 /* josefin-slab-latin-500-normal.ttf */,
-				DE957C4E91344D43BA9C76AF /* josefin-slab-latin-600-italic.ttf */,
-				EF5288E357684BDDB3B055EF /* josefin-slab-latin-600-normal.ttf */,
-				FB41C69AA18D4BF290680914 /* josefin-slab-latin-700-italic.ttf */,
-				0AAAA7C4EFFA4D71ABDEF2E4 /* josefin-slab-latin-700-normal.ttf */,
-				6EAA90E8BB7E47BFAF95176C /* josefin-slab-latin-100-italic.woff */,
-				2F55885E81754BEF8DB5FBC5 /* josefin-slab-latin-100-italic.woff2 */,
-				9B237214D10141E1AE5D3B0F /* josefin-slab-latin-100-normal.woff */,
-				092C29C83FBF439C9C808139 /* josefin-slab-latin-100-normal.woff2 */,
-				27EA22B8727F4199B6EBD6A7 /* josefin-slab-latin-200-italic.woff */,
-				413CE99B205A4A92B860C8B9 /* josefin-slab-latin-200-italic.woff2 */,
-				6DCC2062E2664608BC033ED7 /* josefin-slab-latin-200-normal.woff */,
-				AC4CFE3B04E8438BB9F70B87 /* josefin-slab-latin-200-normal.woff2 */,
-				C2D8CA6840DB425288D2B662 /* josefin-slab-latin-300-italic.woff */,
-				7FC55A110D0F45A68905547A /* josefin-slab-latin-300-italic.woff2 */,
-				F6144D27C3664C819ADA34FA /* josefin-slab-latin-300-normal.woff */,
-				6FDCABF9938549F5B350890F /* josefin-slab-latin-300-normal.woff2 */,
-				756CD1F7718E4EF1A8E9840D /* josefin-slab-latin-400-italic.woff */,
-				9DC7E08C91484199AA0ABF11 /* josefin-slab-latin-400-italic.woff2 */,
-				6D85DF9511B64ADEA54D0ABA /* josefin-slab-latin-400-normal.woff */,
-				306D270338264699AA5A75C9 /* josefin-slab-latin-400-normal.woff2 */,
-				90EAD2898AC24A9D83E51CED /* josefin-slab-latin-500-italic.woff */,
-				AE1E4085B6F24ABCBC121CB7 /* josefin-slab-latin-500-italic.woff2 */,
-				3072A4C08EC2487AB524314C /* josefin-slab-latin-500-normal.woff */,
-				7A71060FB51746168BD4CFC1 /* josefin-slab-latin-500-normal.woff2 */,
-				44C4A8CF5898420FB195207F /* josefin-slab-latin-600-italic.woff */,
-				1866605FEC6C4291B7440B83 /* josefin-slab-latin-600-italic.woff2 */,
-				C077E7F5A2CE40E0AEEA385D /* josefin-slab-latin-600-normal.woff */,
-				C5ACAD4B08CE4C959C4140C6 /* josefin-slab-latin-600-normal.woff2 */,
-				7B66C9F5847E492EB89633EA /* josefin-slab-latin-700-italic.woff */,
-				7ACF2035BB6846B2B283AADB /* josefin-slab-latin-700-italic.woff2 */,
-				90535E49EB83401CA3E563C7 /* josefin-slab-latin-700-normal.woff */,
-				5760034699AA43D8B5C26B75 /* josefin-slab-latin-700-normal.woff2 */,
-				33AEA4C90F004196BA87D3D7 /* LICENSE */,
+				C0B5A2079FBF41429BD14CA6 /* josefin-slab-latin-100-italic.ttf */,
+				F2F181E205A84D1B9630019A /* josefin-slab-latin-100-normal.ttf */,
+				4393912F5C794644AC73F5C9 /* josefin-slab-latin-200-italic.ttf */,
+				B26C642D75A54760B08B4205 /* josefin-slab-latin-200-normal.ttf */,
+				363745F4D1DA42F1B4746D3D /* josefin-slab-latin-300-italic.ttf */,
+				04563430F326407E8F79EE88 /* josefin-slab-latin-300-normal.ttf */,
+				2CB0D80DBA2642BFAA06ED91 /* josefin-slab-latin-400-italic.ttf */,
+				3E32D1C7FFD54149BD68DBBA /* josefin-slab-latin-400-normal.ttf */,
+				AB6910AC463941F7BB60F0D6 /* josefin-slab-latin-500-italic.ttf */,
+				0343D0B0AB584BB598F365E1 /* josefin-slab-latin-500-normal.ttf */,
+				B41421DF894C4AEB86D4D8B2 /* josefin-slab-latin-600-italic.ttf */,
+				DCE790A10EB74250A257929F /* josefin-slab-latin-600-normal.ttf */,
+				8AF2B0F93E2F4708A267E9F6 /* josefin-slab-latin-700-italic.ttf */,
+				96FF390B7B5C455A8DF79700 /* josefin-slab-latin-700-normal.ttf */,
+				3679991B7FA347BBA6BA29FC /* josefin-slab-latin-100-italic.woff */,
+				382B6710D1304CBF90D0D0CB /* josefin-slab-latin-100-italic.woff2 */,
+				8D7D10D8990A4BBAAD7A7D86 /* josefin-slab-latin-100-normal.woff */,
+				B6B5687B732A4454A63E3F5E /* josefin-slab-latin-100-normal.woff2 */,
+				F59AF58E77A04A0999216A2A /* josefin-slab-latin-200-italic.woff */,
+				F9128E452572422AA7E2C540 /* josefin-slab-latin-200-italic.woff2 */,
+				4944FE455C1B40139239751B /* josefin-slab-latin-200-normal.woff */,
+				1F784A5881F54FCFA2EA0D13 /* josefin-slab-latin-200-normal.woff2 */,
+				80BFD713407C46D481664641 /* josefin-slab-latin-300-italic.woff */,
+				B88CA8ADA967444A832DF133 /* josefin-slab-latin-300-italic.woff2 */,
+				DBB0AAE3092F4FCEB30986DC /* josefin-slab-latin-300-normal.woff */,
+				30EA6BDECF55477FA88F3786 /* josefin-slab-latin-300-normal.woff2 */,
+				69D3F9999D734BE28468847F /* josefin-slab-latin-400-italic.woff */,
+				651C2A22AD3842D899942756 /* josefin-slab-latin-400-italic.woff2 */,
+				872EF06204354B3188EB6816 /* josefin-slab-latin-400-normal.woff */,
+				A7389C36516A415980B54052 /* josefin-slab-latin-400-normal.woff2 */,
+				303D7536BAE14EEE9D80A152 /* josefin-slab-latin-500-italic.woff */,
+				6FB5BE5A575E426A8D8292CB /* josefin-slab-latin-500-italic.woff2 */,
+				EC5586DB84344487B034E16B /* josefin-slab-latin-500-normal.woff */,
+				345200A5F7C943948865F3F6 /* josefin-slab-latin-500-normal.woff2 */,
+				2AD7626CC9E34D0C86AAB8FE /* josefin-slab-latin-600-italic.woff */,
+				6A70124781484C699A9A1455 /* josefin-slab-latin-600-italic.woff2 */,
+				B2099C27C39E44B7A2B0EF48 /* josefin-slab-latin-600-normal.woff */,
+				1649EED7318C4697A53EA9C4 /* josefin-slab-latin-600-normal.woff2 */,
+				CC9A6FFECA2F47058EA84A33 /* josefin-slab-latin-700-italic.woff */,
+				21CFB517F54D479E99C437DE /* josefin-slab-latin-700-italic.woff2 */,
+				FA84FDCBE2BB40C1B43F7110 /* josefin-slab-latin-700-normal.woff */,
+				848AF52D428C40CE99F35F1D /* josefin-slab-latin-700-normal.woff2 */,
+				CA0EE86452E14597B80A7586 /* LICENSE */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -382,49 +382,49 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				9EA8B1E3A84F476D92C4C378 /* josefin-slab-latin-100-italic.ttf in Resources */,
-				89DF4C396CAC41A69703E4F4 /* josefin-slab-latin-100-normal.ttf in Resources */,
-				838B77022B99416F8701B7FC /* josefin-slab-latin-200-italic.ttf in Resources */,
-				3B200FCE9E0043709AACD0DD /* josefin-slab-latin-200-normal.ttf in Resources */,
-				8DDDD8CA5F414F71BA8CE502 /* josefin-slab-latin-300-italic.ttf in Resources */,
-				49C39ADF714E4E1393A115C9 /* josefin-slab-latin-300-normal.ttf in Resources */,
-				92B5426392B94C278D6D4610 /* josefin-slab-latin-400-italic.ttf in Resources */,
-				40B93DAEABBE42C491BA7B0E /* josefin-slab-latin-400-normal.ttf in Resources */,
-				94EF3F6EA4D94CB5A9759E3E /* josefin-slab-latin-500-italic.ttf in Resources */,
-				FC25B21644DB431BB6B8D48F /* josefin-slab-latin-500-normal.ttf in Resources */,
-				35CBDF0C26A34984BF3B0B74 /* josefin-slab-latin-600-italic.ttf in Resources */,
-				36ACBEB7059E474BA0B1C249 /* josefin-slab-latin-600-normal.ttf in Resources */,
-				137871BAF9714F5B9CE0FF74 /* josefin-slab-latin-700-italic.ttf in Resources */,
-				E57287D282304847A2364588 /* josefin-slab-latin-700-normal.ttf in Resources */,
-				66EB520AE51445709AEFD6C0 /* josefin-slab-latin-100-italic.woff in Resources */,
-				9221F84CBEE944C0B7C32426 /* josefin-slab-latin-100-italic.woff2 in Resources */,
-				F1A8DA26FF384B57A9C10189 /* josefin-slab-latin-100-normal.woff in Resources */,
-				EFD8C01CA6344EBAAFF606C4 /* josefin-slab-latin-100-normal.woff2 in Resources */,
-				C873DADBB4D943BC92A93598 /* josefin-slab-latin-200-italic.woff in Resources */,
-				755E8718BB484E8DAB735A57 /* josefin-slab-latin-200-italic.woff2 in Resources */,
-				DEC42113527E4D81908AEF92 /* josefin-slab-latin-200-normal.woff in Resources */,
-				1604D87640DD44519A1F1589 /* josefin-slab-latin-200-normal.woff2 in Resources */,
-				68F3CD73C4D14AACBAD27228 /* josefin-slab-latin-300-italic.woff in Resources */,
-				53E84B10E9DB4224B69863D5 /* josefin-slab-latin-300-italic.woff2 in Resources */,
-				39B8919A2525406CAB2FD868 /* josefin-slab-latin-300-normal.woff in Resources */,
-				93EFACF204814375BC88B962 /* josefin-slab-latin-300-normal.woff2 in Resources */,
-				68C3B0E10C754F5A96E100C1 /* josefin-slab-latin-400-italic.woff in Resources */,
-				EFEED76C6F2C4679BA1B55A8 /* josefin-slab-latin-400-italic.woff2 in Resources */,
-				E1790F51E212473395BC51CF /* josefin-slab-latin-400-normal.woff in Resources */,
-				861EAD684E094F85A427C569 /* josefin-slab-latin-400-normal.woff2 in Resources */,
-				EE616EA04784469CAB71D09C /* josefin-slab-latin-500-italic.woff in Resources */,
-				728992693BB144CA818DFA36 /* josefin-slab-latin-500-italic.woff2 in Resources */,
-				56A75AD42BDF4903B1A79739 /* josefin-slab-latin-500-normal.woff in Resources */,
-				A1839CA1475B4909B402A78E /* josefin-slab-latin-500-normal.woff2 in Resources */,
-				BE32CA09526A4002B47173F7 /* josefin-slab-latin-600-italic.woff in Resources */,
-				199680A576A548C5B4E4C6F4 /* josefin-slab-latin-600-italic.woff2 in Resources */,
-				B34F9889240E4CDD86A208BF /* josefin-slab-latin-600-normal.woff in Resources */,
-				7928E9B8268744A5AB577CBF /* josefin-slab-latin-600-normal.woff2 in Resources */,
-				170A17E561CD4C70A1FEF70F /* josefin-slab-latin-700-italic.woff in Resources */,
-				F4FC8C49CC184103A9004530 /* josefin-slab-latin-700-italic.woff2 in Resources */,
-				752DA4F680FD4C65A97D3937 /* josefin-slab-latin-700-normal.woff in Resources */,
-				94A558F6A4FB4976817E8288 /* josefin-slab-latin-700-normal.woff2 in Resources */,
-				AA9003A788BE44AA9C51096B /* LICENSE in Resources */,
+				62088019F21F430AB74FD46D /* josefin-slab-latin-100-italic.ttf in Resources */,
+				6C0FA3E5776A4EF09B65B4B0 /* josefin-slab-latin-100-normal.ttf in Resources */,
+				46E668357D7E45D7B08036D9 /* josefin-slab-latin-200-italic.ttf in Resources */,
+				5CC1764CF58F4D4FB0E9C020 /* josefin-slab-latin-200-normal.ttf in Resources */,
+				223672AAED9246E885996D6F /* josefin-slab-latin-300-italic.ttf in Resources */,
+				3A9D77C0F2EB4FF380BD7E8E /* josefin-slab-latin-300-normal.ttf in Resources */,
+				E173E11E475F467A839CFD99 /* josefin-slab-latin-400-italic.ttf in Resources */,
+				1CF49AC9589644C197AE7925 /* josefin-slab-latin-400-normal.ttf in Resources */,
+				3747406E4B9A42A48163BF82 /* josefin-slab-latin-500-italic.ttf in Resources */,
+				175BEF95D7C4444B92AF40BA /* josefin-slab-latin-500-normal.ttf in Resources */,
+				4FDDADFE89954E22B1CF2028 /* josefin-slab-latin-600-italic.ttf in Resources */,
+				B5BD8A7228F14F6C9DD59BCF /* josefin-slab-latin-600-normal.ttf in Resources */,
+				EC8A652AC34B482686474ECA /* josefin-slab-latin-700-italic.ttf in Resources */,
+				B5A0623C52984ABF9DFBEBA5 /* josefin-slab-latin-700-normal.ttf in Resources */,
+				F74D8352368E46498BFD2020 /* josefin-slab-latin-100-italic.woff in Resources */,
+				59B1AB6742FA4A5F954755EA /* josefin-slab-latin-100-italic.woff2 in Resources */,
+				04FDC3663BF947E496C76B97 /* josefin-slab-latin-100-normal.woff in Resources */,
+				04834D211D0A49BBBEDE9378 /* josefin-slab-latin-100-normal.woff2 in Resources */,
+				E52A4CAD2F1D4B65A7901B90 /* josefin-slab-latin-200-italic.woff in Resources */,
+				FED61E80A2574A678DB8E40B /* josefin-slab-latin-200-italic.woff2 in Resources */,
+				4F04F772BF5145A3AE524130 /* josefin-slab-latin-200-normal.woff in Resources */,
+				A36D7EAD764F4625ACA58C3C /* josefin-slab-latin-200-normal.woff2 in Resources */,
+				95464D989F9442398373BE65 /* josefin-slab-latin-300-italic.woff in Resources */,
+				8F2910258EE7447A9D1ED643 /* josefin-slab-latin-300-italic.woff2 in Resources */,
+				75AAE5CF0AC04E76B47D54B3 /* josefin-slab-latin-300-normal.woff in Resources */,
+				AD4D898CB4274986AF3EDCA8 /* josefin-slab-latin-300-normal.woff2 in Resources */,
+				5A75373898D7447CB9D81336 /* josefin-slab-latin-400-italic.woff in Resources */,
+				F9CC660491AA4B7B8926AA35 /* josefin-slab-latin-400-italic.woff2 in Resources */,
+				2EC2AEA807F340B7A2A4641D /* josefin-slab-latin-400-normal.woff in Resources */,
+				5BA050CFFF4C42628B55FD20 /* josefin-slab-latin-400-normal.woff2 in Resources */,
+				E14132240200494F80B913B9 /* josefin-slab-latin-500-italic.woff in Resources */,
+				2B2712149EA040FB8FB39223 /* josefin-slab-latin-500-italic.woff2 in Resources */,
+				30A7D1AB19324C80A46E1A1C /* josefin-slab-latin-500-normal.woff in Resources */,
+				2603E18F2CF14381A4F8C091 /* josefin-slab-latin-500-normal.woff2 in Resources */,
+				7CD9B0BFACB742DD86114548 /* josefin-slab-latin-600-italic.woff in Resources */,
+				1D91860FDDBF4B64A678CD75 /* josefin-slab-latin-600-italic.woff2 in Resources */,
+				A9B3A4F7C5EE46899EC52542 /* josefin-slab-latin-600-normal.woff in Resources */,
+				5C66677F2D044532857AF2A2 /* josefin-slab-latin-600-normal.woff2 in Resources */,
+				864F99587C3A44A69C3D6CC8 /* josefin-slab-latin-700-italic.woff in Resources */,
+				8569B7B18F404058AC201F2A /* josefin-slab-latin-700-italic.woff2 in Resources */,
+				9E7AC47907F4456ABEF6E061 /* josefin-slab-latin-700-normal.woff in Resources */,
+				E3875B180AC842E5BCF1D8B6 /* josefin-slab-latin-700-normal.woff2 in Resources */,
+				F7486A60106C43E6912F40B4 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
