@@ -35,32 +35,33 @@ const MovieDetail = ({ route }) => {
           PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
           {
             title: "Storage Permission Needed",
-            message: "App needs access to your storage to download photos"
+            message: "App needs access to your storage to download photos",
           }
         );
+        console.log('Permission granted:', granted);
         return granted === PermissionsAndroid.RESULTS.GRANTED;
       } catch (err) {
-        console.warn(err);
+        console.warn('Permission request error:', err);
         return false;
       }
     } else {
-      return true;
+      return true; // iOS doesn't require this permission
     }
   };
-
+  
   const handleDownload = async () => {
     if (!currentImage) {
       Alert.alert("No image selected", "Please select an image to download.");
       return;
     }
-
+  
     const hasPermission = await requestStoragePermission();
+    console.log('Has storage permission:', hasPermission);
     if (!hasPermission) {
       Alert.alert("Permission denied", "Cannot download image without storage permission.");
       return;
     }
-    console.log(hasPermission,"AAAA")
-
+  
     try {
       const url = `https://image.tmdb.org/t/p/w500${currentImage.file_path}`;
       const filename = url.split('/').pop();
@@ -75,10 +76,12 @@ const MovieDetail = ({ route }) => {
         throw new Error(`Failed to download image. Status code: ${result.statusCode}`);
       }
     } catch (error) {
-      console.error(error);
+      console.error('Download error:', error);
       Alert.alert("Download failed", "There was an error downloading the image.");
     }
   };
+  
+  
 
   const onViewableItemsChanged = useCallback(({ viewableItems }) => {
     if (viewableItems.length > 0) {
