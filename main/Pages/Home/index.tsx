@@ -90,7 +90,7 @@ const Home = ({ navigation }: any) => {
               alignItems : 'center',
               position : 'absolute'   
             }}
-            onPress={() => navigation.navigate('MakeSlideShow')}>
+            onPress={() => navigation.navigate('ImageScreen')}>
             <View style={styles.buttonContent}>
               <Image source={require('../../Assets/Home/Ground.png')} />
               <Text style={styles.buttonText}>Make now</Text>

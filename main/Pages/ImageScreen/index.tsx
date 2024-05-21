@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   View, 
   Text, 
@@ -8,11 +8,25 @@ import {
   TouchableOpacity, 
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import RNFS from 'react-native-fs';
 
-const ImageScreen = ({ route }) => {
-  const { backdrops } = route.params;
+const ImageScreen = () => {
+  const [images, setImages] = useState([]);
   const [selectedImages, setSelectedImages] = useState([]);
   const navigation = useNavigation();
+
+  useEffect(() => {
+    const loadImages = async () => {
+      try {
+        const files = await RNFS.readDir(`${RNFS.DocumentDirectoryPath}/downloaded_images`);
+        setImages(files.map(file => file.path));
+      } catch (error) {
+        console.error("Error reading downloaded images:", error);
+      }
+    };
+
+    loadImages();
+  }, []);
 
   const handleImagePick = (image) => {
     if (selectedImages.includes(image)) {
@@ -28,7 +42,7 @@ const ImageScreen = ({ route }) => {
       <TouchableOpacity onPress={() => handleImagePick(item)}>
         <View style={styles.imageContainer}>
           <Image 
-            source={{ uri: `https://image.tmdb.org/t/p/w500${item.file_path}` }} 
+            source={{ uri: `file://${item}` }} 
             style={styles.image} 
           />
           {isSelected && (
@@ -51,9 +65,9 @@ const ImageScreen = ({ route }) => {
       </TouchableOpacity>
       <Text style={styles.text}>Choose image</Text>
       <FlatList
-        data={backdrops}
+        data={images}
         renderItem={renderItem}
-        keyExtractor={(item) => item.file_path}
+        keyExtractor={(item) => item}
         numColumns={3}
       />
       <View style={styles.selectedCountContainer}>

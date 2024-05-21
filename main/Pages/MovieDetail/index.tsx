@@ -64,9 +64,10 @@ const MovieDetail = ({ route }) => {
     try {
       const url = `https://image.tmdb.org/t/p/w500${currentImage.file_path}`;
       const filename = url.split('/').pop();
-      const dest = `${RNFS.DownloadDirectoryPath}/${filename}`;
+      const dest = `${RNFS.DocumentDirectoryPath}/downloaded_images/${filename}`;
+      await RNFS.mkdir(`${RNFS.DocumentDirectoryPath}/downloaded_images`);
       const download = RNFS.downloadFile({ fromUrl: url, toFile: dest });
-
+  
       const result = await download.promise;
       if (result.statusCode === 200) {
         Alert.alert("Download complete", `Image saved to ${dest}`);
