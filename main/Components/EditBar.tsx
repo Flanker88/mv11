@@ -6,7 +6,7 @@ import {
   Text,
   TouchableOpacity, 
 } from 'react-native';
-import Video from 'react-native-video';  
+import Video from 'react-native-video';  // Import Video từ react-native-video
 import { FFmpegKit } from 'ffmpeg-kit-react-native';
 import RNFS from 'react-native-fs';
 import { PaperProvider } from 'react-native-paper';
@@ -14,7 +14,8 @@ import { PaperProvider } from 'react-native-paper';
 const SlideShow = ({ route, navigation }) => {
   const { selectedImages } = route.params;
   const [videoUri, setVideoUri] = useState('');
-  const [isPlaying, setIsPlaying] = useState(false); 
+  const [isPlaying, setIsPlaying] = useState(false); // Trạng thái phát/tạm dừng
+  const videoRef = useRef(null);
 
   useEffect(() => {
     const createVideoSlideshow = async () => {
@@ -23,8 +24,10 @@ const SlideShow = ({ route, navigation }) => {
       const timestamp = new Date().getTime();
       const outputPath = `${RNFS.DocumentDirectoryPath}/slideshow_${timestamp}.mp4`;
 
+      // Tạo danh sách tệp đầu vào
       const inputFiles = selectedImages.map(image => `-loop 1 -t 3 -i ${image}`).join(' ');
 
+      // Thiết lập filter_complex để tạo slideshow
       const filterComplex = selectedImages.map(
         (_, index) => `[${index}:v]scale=720:1280:force_original_aspect_ratio=decrease,pad=720:1280:(ow-iw)/2:(oh-ih)/2,setsar=1[v${index}]`
       ).join('; ') + '; ' +
@@ -32,6 +35,7 @@ const SlideShow = ({ route, navigation }) => {
         (_, index) => `[v${index}]`
       ).join('') + `concat=n=${selectedImages.length}:v=1:a=0,format=yuv420p[v]`;
 
+      // Lệnh FFmpeg
       const ffmpegCommand = `${inputFiles} -filter_complex "${filterComplex}" -map "[v]" -vsync vfr -pix_fmt yuv420p ${outputPath}`;
       console.log('FFmpeg Command:', ffmpegCommand);
 
@@ -79,7 +83,7 @@ const SlideShow = ({ route, navigation }) => {
               source={{ uri: videoUri }} 
               style={styles.video} 
               paused={!isPlaying}
-              
+              controls 
             />
         </View>
         <View style={styles.bar}>
@@ -139,12 +143,11 @@ const styles = StyleSheet.create({
     marginTop: 30,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius : 20,
-    backgroundColor : 'red'
   },
   video: {
-    width: '100%',
+    width: 420,
     height: 605,
+    borderRadius: 10,
   },
   bar: {
     alignItems: 'center',

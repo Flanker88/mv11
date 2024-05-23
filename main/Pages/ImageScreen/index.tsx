@@ -9,6 +9,8 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import RNFS from 'react-native-fs';
+import { FFmpegKit } from 'ffmpeg-kit-react-native';
+import SearchBar from '../../Components/SearchBar';
 
 const ImageScreen = () => {
   const [images, setImages] = useState([]);
@@ -33,6 +35,14 @@ const ImageScreen = () => {
       setSelectedImages(selectedImages.filter(img => img !== image));
     } else {
       setSelectedImages([...selectedImages, image]);
+    }
+  };
+
+  const handleNextPress = () => {
+    if (selectedImages.length > 0) {
+      navigation.navigate('SlideShow', { selectedImages });
+    } else {
+      alert('Please select at least one image');
     }
   };
 
@@ -71,7 +81,7 @@ const ImageScreen = () => {
         numColumns={3}
       />
       <View style={styles.selectedCountContainer}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={handleNextPress}>
           <Image
             style={styles.next}
             source={require('../../Assets/Movie/next.png')} />
