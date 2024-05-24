@@ -15,6 +15,7 @@ import DocumentPicker from 'react-native-document-picker';
 const SlideShow = ({ route, navigation }) => {
   const { selectedImages } = route.params;
   const [videoUri, setVideoUri] = useState('');
+  const [isMute, setIsMute] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
   const [selectedMusic, setSelectedMusic] = useState(null);
 
@@ -64,6 +65,10 @@ const SlideShow = ({ route, navigation }) => {
     console.log('Video URI:', videoUri);
   }, [videoUri]);
 
+  const toggleMute = () => {
+    setIsMute(isMute);
+  };
+
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
@@ -101,8 +106,8 @@ const SlideShow = ({ route, navigation }) => {
         <View style={styles.header}>
           <Text style={styles.text}>Make slideshow</Text>
           <Image source={require('../../Assets/Slide/line.png')} />
-          <TouchableOpacity style={styles.volume}>
-            <Image source={require('../../Assets/Slide/volume.png')} />
+          <TouchableOpacity style={styles.volume} onPress={toggleMute}>
+            <Image source={isPlaying ? require('../../Assets/Slide/volume.png') : require('../../Assets/Slide/muteVolume.png')} />
           </TouchableOpacity>
         </View>
         <TouchableOpacity style={styles.save} onPress={saveVideo}>
@@ -123,7 +128,7 @@ const SlideShow = ({ route, navigation }) => {
           <TouchableOpacity style={styles.play} onPress={togglePlayPause}>
             <Image source={isPlaying ? require('../../Assets/Slide/pause.png') : require('../../Assets/Slide/play.png')} />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.menu}>
+          <TouchableOpacity style={styles.menu} onPress={() => navigation.navigate('ChooseImage', { selectedImages })}>
             <Image source={require('../../Assets/Slide/menu.png')} />
           </TouchableOpacity>
         </View>
