@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { 
   View, 
   Image, 
@@ -10,11 +10,13 @@ import Video from 'react-native-video';
 import { FFmpegKit } from 'ffmpeg-kit-react-native';
 import RNFS from 'react-native-fs';
 import { PaperProvider } from 'react-native-paper';
+import DocumentPicker from 'react-native-document-picker';
 
 const SlideShow = ({ route, navigation }) => {
   const { selectedImages } = route.params;
   const [videoUri, setVideoUri] = useState('');
-  const [isPlaying, setIsPlaying] = useState(false); 
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [selectedMusic, setSelectedMusic] = useState(null);
 
   useEffect(() => {
     const createVideoSlideshow = async () => {
@@ -23,7 +25,7 @@ const SlideShow = ({ route, navigation }) => {
       const timestamp = new Date().getTime();
       const outputPath = `${RNFS.DocumentDirectoryPath}/slideshow_${timestamp}.mp4`;
 
-      const inputFiles = selectedImages.map(image => `-loop 1 -t 3 -i ${image}`).join(' ');
+      const inputFiles = selectedImages.map(image => `-loop 1 -t 3 -i "${image}"`).join(' ');
 
       const filterComplex = selectedImages.map(
         (_, index) => `[${index}:v]scale=720:1280:force_original_aspect_ratio=decrease,pad=720:1280:(ow-iw)/2:(oh-ih)/2,setsar=1[v${index}]`
@@ -32,22 +34,31 @@ const SlideShow = ({ route, navigation }) => {
         (_, index) => `[v${index}]`
       ).join('') + `concat=n=${selectedImages.length}:v=1:a=0,format=yuv420p[v]`;
 
-      const ffmpegCommand = `${inputFiles} -filter_complex "${filterComplex}" -map "[v]" -vsync vfr -pix_fmt yuv420p ${outputPath}`;
+      let ffmpegCommand = `${inputFiles} -filter_complex "${filterComplex}" -map "[v]" -fps_mode vfr -pix_fmt yuv420p ${outputPath}`;
+
+      if (selectedMusic) {
+        ffmpegCommand = `${inputFiles} -i "${selectedMusic}" -filter_complex "${filterComplex}" -map "[v]" -map ${selectedImages.length}:a -fps_mode vfr -pix_fmt yuv420p -shortest ${outputPath}`;
+      }
+
       console.log('FFmpeg Command:', ffmpegCommand);
 
       await FFmpegKit.executeAsync(ffmpegCommand, async (session) => {
         const returnCode = await session.getReturnCode();
-        const failStackTrace = await session.getFailStackTrace();
+        const logs = await session.getAllLogsAsString();
 
-        console.log('FFmpeg return code:', returnCode);
-        const outputUri = `file://${outputPath}`;
-        console.log('FFmpeg process succeeded, output URI:', outputUri);
-        setVideoUri(outputUri);
+        if (returnCode.isValueSuccess()) {
+          const outputUri = `file://${outputPath}`;
+          console.log('FFmpeg process succeeded, output URI:', outputUri);
+          setVideoUri(outputUri);
+        } else {
+          console.error('FFmpeg process failed with return code:', returnCode);
+          console.error('FFmpeg process logs:', logs);
+        }
       });
     };
 
     createVideoSlideshow();
-  }, [selectedImages]);
+  }, [selectedImages, selectedMusic]);
 
   useEffect(() => {
     console.log('Video URI:', videoUri);
@@ -55,6 +66,30 @@ const SlideShow = ({ route, navigation }) => {
 
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
+  };
+
+  const selectMusic = async () => {
+    try {
+      const res = await DocumentPicker.pick({
+        type: [DocumentPicker.types.audio],
+      });
+      setSelectedMusic(res[0].uri);
+      console.log('Selected Music:', res[0].uri);
+    } catch (err) {
+      if (DocumentPicker.isCancel(err)) {
+        console.log('User cancelled the picker');
+      } else {
+        throw err;
+      }
+    }
+  };
+
+  const saveVideo = () => {
+    if (videoUri) {
+      navigation.navigate('ResultSlide', { videoUri });
+    } else {
+      console.log('No video URI available to save');
+    }
   };
 
   return (
@@ -70,20 +105,19 @@ const SlideShow = ({ route, navigation }) => {
             <Image source={require('../../Assets/Slide/volume.png')} />
           </TouchableOpacity>
         </View>
-        <TouchableOpacity style={styles.save}>
+        <TouchableOpacity style={styles.save} onPress={saveVideo}>
           <Image source={require('../../Assets/Slide/save.png')} />
           <Text style={styles.textSave}>Save</Text>
         </TouchableOpacity>
         <View style={styles.videoContainer}>
-            <Video 
-              source={{ uri: videoUri }} 
-              style={styles.video} 
-              paused={!isPlaying}
-              
-            />
+          <Video 
+            source={{ uri: videoUri }} 
+            style={styles.video} 
+            paused={!isPlaying}
+          />
         </View>
         <View style={styles.bar}>
-          <TouchableOpacity style={styles.music}>
+          <TouchableOpacity style={styles.music} onPress={selectMusic}>
             <Image source={require('../../Assets/Slide/music.png')} />
           </TouchableOpacity>
           <TouchableOpacity style={styles.play} onPress={togglePlayPause}>
@@ -139,8 +173,7 @@ const styles = StyleSheet.create({
     marginTop: 30,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius : 20,
-    backgroundColor : 'red'
+    borderRadius: 20,
   },
   video: {
     width: '100%',
