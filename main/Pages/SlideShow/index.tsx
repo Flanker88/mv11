@@ -15,19 +15,22 @@ import DocumentPicker from 'react-native-document-picker';
 const SlideShow = ({ route, navigation }) => {
   const { selectedImages } = route.params;
   const [videoUri, setVideoUri] = useState('');
-  const [isMute, setIsMute] = useState(true);
+  const [isMute, setIsMute] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [selectedMusic, setSelectedMusic] = useState(null);
+  const [musicFilePath, setMusicFilePath] = useState('');
+  const [title, setTitle] = useState('Make slideshow');
 
   useEffect(() => {
     const createVideoSlideshow = async () => {
       if (selectedImages.length === 0) return;
-
+      console.log(selectedImages,"AAABBB")
+  
       const timestamp = new Date().getTime();
       const outputPath = `${RNFS.DocumentDirectoryPath}/slideshow_${timestamp}.mp4`;
-
-      const inputFiles = selectedImages.map(image => `-loop 1 -t 3 -i "${image}"`).join(' ');
-
+  
+      const inputFiles = selectedImages.map(image => `-loop 1 -t 2 -i "${image}"`).join(' ');
+  
       const filterComplex = selectedImages.map(
         (_, index) => `[${index}:v]scale=720:1280:force_original_aspect_ratio=decrease,pad=720:1280:(ow-iw)/2:(oh-ih)/2,setsar=1[v${index}]`
       ).join('; ') + '; ' +
@@ -35,38 +38,36 @@ const SlideShow = ({ route, navigation }) => {
         (_, index) => `[v${index}]`
       ).join('') + `concat=n=${selectedImages.length}:v=1:a=0,format=yuv420p[v]`;
 
-      let ffmpegCommand = `${inputFiles} -filter_complex "${filterComplex}" -map "[v]" -fps_mode vfr -pix_fmt yuv420p ${outputPath}`;
+      let ffmpegCommand;
 
-      if (selectedMusic) {
-        ffmpegCommand = `${inputFiles} -i "${selectedMusic}" -filter_complex "${filterComplex}" -map "[v]" -map ${selectedImages.length}:a -fps_mode vfr -pix_fmt yuv420p -shortest ${outputPath}`;
+      if (musicFilePath) {
+        console.log("Temporary Music Path:", musicFilePath);
+        ffmpegCommand = `${inputFiles} -i "${musicFilePath}" -filter_complex "${filterComplex}" -map "[v]" -map ${selectedImages.length}:a -fps_mode vfr -pix_fmt yuv420p -shortest ${outputPath}`;
+      } else {
+        ffmpegCommand = `${inputFiles} -filter_complex "${filterComplex}" -map "[v]" -fps_mode vfr -pix_fmt yuv420p ${outputPath}`;
       }
-
+  
       console.log('FFmpeg Command:', ffmpegCommand);
-
+  
       await FFmpegKit.executeAsync(ffmpegCommand, async (session) => {
-        const returnCode = await session.getReturnCode();
-        const logs = await session.getAllLogsAsString();
+        // const returnCode = await session.getReturnCode();
+        // const logs = await session.getAllLogsAsString();
 
-        if (returnCode.isValueSuccess()) {
-          const outputUri = `file://${outputPath}`;
-          console.log('FFmpeg process succeeded, output URI:', outputUri);
-          setVideoUri(outputUri);
-        } else {
-          console.error('FFmpeg process failed with return code:', returnCode);
-          console.error('FFmpeg process logs:', logs);
-        }
+        const outputUri = `file://${outputPath}`;
+        console.log('FFmpeg process succeeded, output URI:', outputUri);
+        setVideoUri(outputUri);
       });
     };
-
+  
     createVideoSlideshow();
-  }, [selectedImages, selectedMusic]);
+  }, [selectedImages, musicFilePath]);  
 
   useEffect(() => {
     console.log('Video URI:', videoUri);
   }, [videoUri]);
 
   const toggleMute = () => {
-    setIsMute(isMute);
+    setIsMute(prevIsMute => !prevIsMute);
   };
 
   const togglePlayPause = () => {
@@ -77,9 +78,17 @@ const SlideShow = ({ route, navigation }) => {
     try {
       const res = await DocumentPicker.pick({
         type: [DocumentPicker.types.audio],
-      });
-      setSelectedMusic(res[0].uri);
-      console.log('Selected Music:', res[0].uri);
+      }); 
+      console.log('Selected Music:', res[0]);
+      const musicUri = res[0].uri;
+      setSelectedMusic(musicUri);
+      console.log('Selected Music URI:', musicUri);
+
+      const musicFilePath = `${RNFS.TemporaryDirectoryPath}/temp_music_file.mp3`;
+      await RNFS.copyFile(musicUri, musicFilePath);
+      console.log('Temporary Music Path:', musicFilePath);
+      setMusicFilePath(musicFilePath);
+
     } catch (err) {
       if (DocumentPicker.isCancel(err)) {
         console.log('User cancelled the picker');
@@ -104,10 +113,12 @@ const SlideShow = ({ route, navigation }) => {
           <Image source={require('../../Assets/Movie/back.png')} />
         </TouchableOpacity>
         <View style={styles.header}>
-          <Text style={styles.text}>Make slideshow</Text>
+          <TouchableOpacity onPress={() => navigation.navigate('TitleSlide', { setTitle })}>
+            <Text style={styles.text}>{title}</Text>
+          </TouchableOpacity>
           <Image source={require('../../Assets/Slide/line.png')} />
           <TouchableOpacity style={styles.volume} onPress={toggleMute}>
-            <Image source={isPlaying ? require('../../Assets/Slide/volume.png') : require('../../Assets/Slide/muteVolume.png')} />
+            <Image source={isMute ? require('../../Assets/Slide/volume-slash.png') : require('../../Assets/Slide/volume.png')} />
           </TouchableOpacity>
         </View>
         <TouchableOpacity style={styles.save} onPress={saveVideo}>
@@ -119,6 +130,7 @@ const SlideShow = ({ route, navigation }) => {
             source={{ uri: videoUri }} 
             style={styles.video} 
             paused={!isPlaying}
+            muted={isMute}
           />
         </View>
         <View style={styles.bar}>
@@ -128,7 +140,7 @@ const SlideShow = ({ route, navigation }) => {
           <TouchableOpacity style={styles.play} onPress={togglePlayPause}>
             <Image source={isPlaying ? require('../../Assets/Slide/pause.png') : require('../../Assets/Slide/play.png')} />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.menu} onPress={() => navigation.navigate('ChooseImage', { selectedImages })}>
+          <TouchableOpacity style={styles.menu} onPress={() => navigation.navigate('ImageVideo', { selectedImages })}>
             <Image source={require('../../Assets/Slide/menu.png')} />
           </TouchableOpacity>
         </View>

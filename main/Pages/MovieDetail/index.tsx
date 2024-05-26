@@ -16,6 +16,7 @@ import useSWR from 'swr';
 import { fetcherTMDB } from '../../Config/fetcherTMDB';
 import { useNavigation } from '@react-navigation/native';
 import RNFS from 'react-native-fs';
+import ImageResizer from 'react-native-image-resizer';
 
 const MovieDetail = ({ route }) => {
   const navigation = useNavigation();
@@ -38,50 +39,49 @@ const MovieDetail = ({ route }) => {
             message: "App needs access to your storage to download photos",
           }
         );
-        console.log('Permission granted:', granted);
         return granted === PermissionsAndroid.RESULTS.GRANTED;
       } catch (err) {
-        console.warn('Permission request error:', err);
+        console.warn(err);
         return false;
       }
     } else {
-      return true; // iOS doesn't require this permission
+      return true; 
     }
   };
-  
+
   const handleDownload = async () => {
     if (!currentImage) {
       Alert.alert("No image selected", "Please select an image to download.");
       return;
     }
-  
+
     const hasPermission = await requestStoragePermission();
-    console.log('Has storage permission:', hasPermission);
     if (!hasPermission) {
       Alert.alert("Permission denied", "Cannot download image without storage permission.");
       return;
     }
-  
+
     try {
       const url = `https://image.tmdb.org/t/p/w500${currentImage.file_path}`;
       const filename = url.split('/').pop();
-      const dest = `${RNFS.DocumentDirectoryPath}/downloaded_images/${filename}`;
+      const resizedImage = await ImageResizer.createResizedImage(
+        url,
+        393, 
+        612, 
+        'PNG',
+        80 
+      );
+
+      const dest = `${RNFS.DocumentDirectoryPath}/downloaded_images/${resizedImage.name}`;
       await RNFS.mkdir(`${RNFS.DocumentDirectoryPath}/downloaded_images`);
-      const download = RNFS.downloadFile({ fromUrl: url, toFile: dest });
-  
-      const result = await download.promise;
-      if (result.statusCode === 200) {
-        Alert.alert("Download complete", `Image saved to ${dest}`);
-      } else {
-        throw new Error(`Failed to download image. Status code: ${result.statusCode}`);
-      }
+      await RNFS.moveFile(resizedImage.uri, dest);
+
+      Alert.alert("Download succeeded");
     } catch (error) {
-      console.error('Download error:', error);
+      console.error(error);
       Alert.alert("Download failed", "There was an error downloading the image.");
     }
   };
-  
-  
 
   const onViewableItemsChanged = useCallback(({ viewableItems }) => {
     if (viewableItems.length > 0) {
@@ -135,8 +135,8 @@ const MovieDetail = ({ route }) => {
               horizontal
               keyExtractor={(item) => item.file_path}
               onScroll={Animated.event(
-                [{nativeEvent : {contentOffset : {x : scrollX }}}],
-                {useNativeDriver : true}
+                [{ nativeEvent: { contentOffset: { x: scrollX } } }],
+                { useNativeDriver: true }
               )}
               scrollEventThrottle={16}
               onViewableItemsChanged={onViewableItemsChanged}

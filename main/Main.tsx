@@ -5,10 +5,11 @@ import MyFiles from './Pages/MyFiles';
 import PosterMovie from './Pages/PosterMovie';
 import SlideShow from './Pages/SlideShow';
 import Home from './Pages/Home';
-import MakeSlideShow from './Pages/MakeSlideShow';
+import ImageVideo from './Pages/ImageVideo';
 import MovieDetail from './Pages/MovieDetail';
 import ImageScreen from './Pages/ImageScreen';
 import ResultSlide from './Pages/ResultSlide';
+import TitleSlide from './Pages/TitleSlide';
 
 const Stack = createNativeStackNavigator();
 
@@ -66,8 +67,15 @@ const Main = () => {
         }}
         />
         <Stack.Screen 
-        name="MakeSlideShow" 
-        component={MakeSlideShow} 
+        name="TitleSlide" 
+        component={TitleSlide} 
+        options={{
+          headerShown: false,
+        }}
+        />
+        <Stack.Screen 
+        name="ImageVideo" 
+        component={ImageVideo} 
         options={{
           headerShown: false,
         }}

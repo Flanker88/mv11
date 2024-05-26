@@ -6,11 +6,10 @@ import {
   Image, 
   StyleSheet, 
   TouchableOpacity, 
+  Alert
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import RNFS from 'react-native-fs';
-import { FFmpegKit } from 'ffmpeg-kit-react-native';
-import SearchBar from '../../Components/SearchBar';
 
 const ImageScreen = () => {
   const [images, setImages] = useState([]);
@@ -23,7 +22,7 @@ const ImageScreen = () => {
         const files = await RNFS.readDir(`${RNFS.DocumentDirectoryPath}/downloaded_images`);
         setImages(files.map(file => file.path));
       } catch (error) {
-        console.error("Error reading downloaded images:", error);
+        Alert.alert("No image, please download in Poster Movie");
       }
     };
 
