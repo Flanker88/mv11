@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { 
   View, 
   StyleSheet, 
@@ -8,9 +8,23 @@ import {
 } from 'react-native';
 import Video from 'react-native-video';
 import { PaperProvider } from 'react-native-paper';
+import DocumentPicker from 'react-native-document-picker';
 
 const ResultSlide = ({ route, navigation }) => {
-  const { videoUri } = route.params;
+  const { videoUri, selectedMusic } = route.params;
+  const [currentMusic, setCurrentMusic] = useState(selectedMusic);
+
+  const songName = (currentMusic.name.split('-')[0]).replace(/([A-Z])/g, ' $1').trim();
+  const singerName = (currentMusic.name.split('-')[1]).replace(/([A-Z])/g, ' $1').trim();
+  const imageUri = `${currentMusic.uri}.png`;
+  console.log(currentMusic,"AAAAAAAA");
+
+  const handleChangeMusic = async () => {
+    const res = await DocumentPicker.pick({
+      type: [DocumentPicker.types.audio],
+    });
+    setCurrentMusic(res[0]);
+  }
 
   return (
     <PaperProvider>
@@ -22,17 +36,19 @@ const ResultSlide = ({ route, navigation }) => {
           <Video 
             source={{ uri: videoUri }} 
             style={styles.video} 
-            controls={true}
+            //controls={true}
           />
-          <View style={styles.song}>
-            <Image style={styles.imgSong} source={require('../../Assets/Movie/back.png')} />
-            <Text style={styles.nameSong}>AAAAAAA</Text>
-            <Text style={styles.nameSinger}>AAAAAAA</Text>
-            <TouchableOpacity style={styles.change}>
-            <Image source={require('../../Assets/EditSlide/Change.png')} />
-            <Text style={styles.textChange}>Change</Text>
-          </TouchableOpacity>
-          </View>
+          {selectedMusic && (
+            <View style={styles.song}>
+              <Image style={styles.imgSong} source={{ uri: imageUri }}/>
+              <Text style={styles.nameSong}>{songName}</Text>
+              <Text style={styles.nameSinger}>{singerName}</Text>
+              <TouchableOpacity style={styles.change} onPress={handleChangeMusic}>
+                <Image source={require('../../Assets/EditSlide/Change.png')} />
+                <Text style={styles.textChange}>Change</Text>
+              </TouchableOpacity>
+            </View>
+          )}
         </View>
       </View>
     </PaperProvider>

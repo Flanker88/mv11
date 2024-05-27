@@ -150,7 +150,8 @@ const styles = StyleSheet.create({
     position : 'absolute'
   },
   next : {
-    marginLeft : 220
+    marginLeft : 220,
+    bottom : 1
   },
   textNext : {
     position : 'absolute',

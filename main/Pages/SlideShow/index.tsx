@@ -51,9 +51,6 @@ const SlideShow = ({ route, navigation }) => {
       console.log('FFmpeg Command:', ffmpegCommand);
   
       await FFmpegKit.executeAsync(ffmpegCommand, async (session) => {
-        // const returnCode = await session.getReturnCode();
-        // const logs = await session.getAllLogsAsString();
-
         const outputUri = `file://${outputPath}`;
         console.log('FFmpeg process succeeded, output URI:', outputUri);
         setVideoUri(outputUri);
@@ -82,8 +79,7 @@ const SlideShow = ({ route, navigation }) => {
       }); 
       console.log('Selected Music:', res[0]);
       const musicUri = res[0].uri;
-      setSelectedMusic(musicUri);
-      console.log('Selected Music URI:', res[0]);
+      setSelectedMusic(res[0] );
 
       const musicFilePath = `${RNFS.TemporaryDirectoryPath}/temp_music_file.mp3`;
       await RNFS.copyFile(musicUri, musicFilePath);
@@ -99,14 +95,28 @@ const SlideShow = ({ route, navigation }) => {
     }
   };
 
-  const saveVideo = () => {
+  const saveVideo = async () => {
     if (videoUri) {
-      navigation.navigate('ResultSlide', { videoUri });
+      try {
+        const currentDate = new Date();
+        const formattedDate = `${currentDate.getFullYear()}-${(currentDate.getMonth() + 1).toString().padStart(2, '0')}-${currentDate.getDate().toString().padStart(2, '0')}`;
+
+        const outputFilename = `${title}_${fontFamily}_${formattedDate}.mp4`;
+        const outputDirectory = `${RNFS.DocumentDirectoryPath}/MyVideos`;
+        const outputFilePath = `${outputDirectory}/${outputFilename}`;
+  
+        await RNFS.mkdir(outputDirectory);
+        await RNFS.moveFile(videoUri.replace('file://', ''), outputFilePath);
+  
+        console.log('Video saved successfully:', outputFilePath);
+      } catch (error) {
+        console.error('Error saving video:', error);
+      }
     } else {
       console.log('No video URI available to save');
     }
   };
-
+  
   return (
     <PaperProvider>
       <View style={styles.container}>
@@ -174,11 +184,12 @@ const styles = StyleSheet.create({
   volume: {
     position: 'absolute',
     marginLeft: 220,
+    bottom : 5
   },
   save: {
     position: 'absolute',
     marginLeft: 310,
-    marginTop: 20,
+    marginTop: 18,
     justifyContent: 'center',
     alignItems: 'center',
   },
