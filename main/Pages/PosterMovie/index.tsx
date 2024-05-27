@@ -78,8 +78,7 @@ const styles = StyleSheet.create({
   topSearchText: {
     color: '#ffffff',
     fontSize: 24,
-    fontWeight: '700',
-    fontFamily : 'Josefin-Slab'
+    fontFamily : 'josefin-slab-latin-700-normal',
   },
   resultsContainer: {
     padding: 10,

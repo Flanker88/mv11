@@ -16,6 +16,7 @@ const SearchBar = ({ onSearch } : any) => {
       <TextInput
         placeholder='Enter movie & TV show'
         placeholderTextColor={'#ffffff'}
+      
         style = {styles.input}
         value={query}
         onChangeText={setQuery}
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
         height : 36,
         padding : 5,
         borderRadius : 10,
-        fontWeight :'700',
+        fontFamily : 'josefin-slab-latin-700-normal',
         fontSize : 16,
         marginLeft : 50,
         borderBottomWidth : 1,
@@ -61,9 +62,9 @@ const styles = StyleSheet.create({
     text : {
       position : 'absolute',
       fontSize : 16,
-      fontWeight : '700',
       marginLeft : 35,
       paddingTop : 7,
-      color : '#000000'
+      color : '#000000',
+      fontFamily : 'josefin-slab-latin-700-normal',
     },
 })

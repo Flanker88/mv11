@@ -2,6 +2,10 @@
   "migIndex": 1,
   "data": [
     {
+      "path": "assets/fonts/AkayaKanadaka-Regular.ttf",
+      "sha1": "8b20df1f73aa9030ad4771ffd0c55e1758e45086"
+    },
+    {
       "path": "assets/fonts/josefin-slab-latin-100-italic.ttf",
       "sha1": "e638b4aa9e86aa499e66dda822d04175054cc87c"
     },
@@ -168,6 +172,22 @@
     {
       "path": "assets/fonts/josefin-slab-latin-700-normal.woff2",
       "sha1": "11d0ff1cb5ade485568e0aa1ec17ca4a7de9cff5"
+    },
+    {
+      "path": "assets/fonts/Jua-Regular.ttf",
+      "sha1": "9122d54d461d57735caeeb843b9961a96225468b"
+    },
+    {
+      "path": "assets/fonts/Karantina-Bold.ttf",
+      "sha1": "bedc5cce95e752c58b0adfef4e199ff83654e178"
+    },
+    {
+      "path": "assets/fonts/Karantina-Light.ttf",
+      "sha1": "42824d7da7b70c178fa466440ba7f6f20a92c868"
+    },
+    {
+      "path": "assets/fonts/Karantina-Regular.ttf",
+      "sha1": "eaa32d0235a80621d0f616cf2ef216433237de7a"
     }
   ]
 }

@@ -34,8 +34,8 @@ const Home = ({ navigation }: any) => {
             marginTop : 220,
             right : 20,
             fontSize : 30,
-            fontWeight : 'bold',
             color : '#FFFFFF',
+            fontFamily : 'josefin-slab-latin-700-normal',
         }}>Poster movie
         </Text>
         <TouchableOpacity
@@ -75,9 +75,8 @@ const Home = ({ navigation }: any) => {
             marginTop : 350,
             left : 20,
             fontSize : 30,
-            fontWeight : 'bold',
             color : '#FFFFFF',
-            fontFamily: 'Open Sans',
+            fontFamily : 'josefin-slab-latin-700-normal',
         }}>Slide show
         </Text>
         <TouchableOpacity
@@ -118,9 +117,8 @@ const Home = ({ navigation }: any) => {
             marginTop : 520,
             right : 50,
             fontSize : 30,
-            fontWeight : 'bold',
             color : '#FFFFFF',
-            fontFamily: 'Open Sans',
+            fontFamily : 'josefin-slab-latin-700-normal',
         }}>My files
         </Text>
           <TouchableOpacity
@@ -181,9 +179,9 @@ const styles = StyleSheet.create({
   buttonText : {
     color : '#000000',
     fontSize : 22,
-    fontWeight :'500',
     position: 'absolute',
-    marginLeft : 5
+    marginLeft : 5,
+    fontFamily : 'josefin-slab-latin-700-normal',
   }
 });
 

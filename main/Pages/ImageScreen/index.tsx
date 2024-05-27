@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
   },
   text : {
     fontSize : 24,
-    fontWeight : '700',
+    fontFamily : 'josefin-slab-latin-700-normal',
     position : 'absolute',
     marginLeft : 130,
     marginTop : 25,
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginLeft : 20,
     marginTop : 20,
-    fontWeight: '700',
+    fontFamily : 'josefin-slab-latin-700-normal',
     position : 'absolute'
   },
   next : {
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
   textNext : {
     position : 'absolute',
     fontSize : 16,
-    fontWeight :'700',
+    fontFamily : 'josefin-slab-latin-700-normal',
     color : '#101010',
     marginLeft : 285,
     marginTop : 23,

@@ -213,15 +213,14 @@ const styles = StyleSheet.create({
   title: {
     color: '#000000',
     fontSize: 24,
-    fontWeight: '700',
     textAlign: 'center',
     marginVertical: 10,
-    fontFamily: "Josefin Sans",
+    fontFamily : 'josefin-slab-latin-700-normal',
   },
   overview: {
     color: '#000000',
     fontSize: 16,
-    fontWeight: '700',
+    fontFamily : 'josefin-slab-latin-700-normal',
     marginHorizontal: 20,
     marginTop: 20,
     textAlign: 'center',
@@ -234,9 +233,8 @@ const styles = StyleSheet.create({
   castName: {
     color: '#5d5d5d',
     fontSize: 16,
-    fontWeight: '700',
     textAlign: 'center',
-    fontFamily: 'JosefinSlab-Regular',
+    fontFamily : 'josefin-slab-latin-700-normal',
   },
   relatedImagesContainer: {
     marginTop: 20,
@@ -256,9 +254,9 @@ const styles = StyleSheet.create({
   },
   textdown: {
     position: 'absolute',
-    marginTop: 20,
+    marginTop: 25,
     fontSize: 16,
-    fontWeight: '700',
+    fontFamily : 'josefin-slab-latin-700-normal',
   },
   errorText: {
     color: '#ff0000',

@@ -24,6 +24,15 @@ const ResultSlide = ({ route, navigation }) => {
             style={styles.video} 
             controls={true}
           />
+          <View style={styles.song}>
+            <Image style={styles.imgSong} source={require('../../Assets/Movie/back.png')} />
+            <Text style={styles.nameSong}>AAAAAAA</Text>
+            <Text style={styles.nameSinger}>AAAAAAA</Text>
+            <TouchableOpacity style={styles.change}>
+            <Image source={require('../../Assets/EditSlide/Change.png')} />
+            <Text style={styles.textChange}>Change</Text>
+          </TouchableOpacity>
+          </View>
         </View>
       </View>
     </PaperProvider>
@@ -36,6 +45,49 @@ const styles = StyleSheet.create({
     backgroundColor: '#0b7bff',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  song : {
+    width : 363,
+    height : 83,
+    marginTop : 20,
+    borderRadius : 20,
+    backgroundColor : '#0657b5'
+  },
+  imgSong : {
+    marginTop : 10,
+    width : 64,
+    height : 64,
+    borderRadius : 10,
+  },
+  nameSong : {
+    marginLeft : 80,
+    marginTop : 20,
+    color : '#ffffff',
+    position : 'absolute',
+    fontSize : 16,
+    fontFamily : 'josefin-slab-latin-700-normal',
+  },
+  nameSinger : {
+    marginLeft : 80,
+    marginTop : 50,
+    color : '#ffffff',
+    position : 'absolute',
+    fontSize : 16,
+    fontFamily : 'josefin-slab-latin-700-normal',
+  },
+  change :{
+    //justifyContent : 'center',
+    alignItems : 'center',
+    marginLeft : 220,
+    marginTop : 8,
+    position : 'absolute'
+  },
+  textChange : {
+    marginTop : 25,
+    color : '#474747',
+    fontSize : 16,
+    fontFamily : 'josefin-slab-latin-700-normal',
+    position : 'absolute',
   },
   back: {
     position: 'absolute',
@@ -52,11 +104,13 @@ const styles = StyleSheet.create({
     height: '100%',
     justifyContent : 'center',
     alignItems : 'center',
-   
+    marginTop : 20
+    
   },
   video: {
     width: 463,
-    height: 665,
+    height: 643,
+    
   },
 });
 

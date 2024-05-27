@@ -56,6 +56,11 @@
 		6F80D945E4C44B86B01B0604 /* josefin-slab-latin-700-italic.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 72C916A5AEE947F0B0C36243 /* josefin-slab-latin-700-italic.woff2 */; };
 		35E7B5D051A94C2BBBEE8CCD /* josefin-slab-latin-700-normal.woff in Resources */ = {isa = PBXBuildFile; fileRef = EB638A5AAD254A8092FC212E /* josefin-slab-latin-700-normal.woff */; };
 		C5D9B330B0A2404ABA81B72C /* josefin-slab-latin-700-normal.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 5A961336C144441C90A6B43C /* josefin-slab-latin-700-normal.woff2 */; };
+		4CCA9AAF76A7475AA1615B19 /* AkayaKanadaka-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4299ED3AC5341AD9AAE34AD /* AkayaKanadaka-Regular.ttf */; };
+		1B21A7CC4C7142ECBBE245B6 /* Jua-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24331278A1FC431BA015B930 /* Jua-Regular.ttf */; };
+		8D3604E898CA44D18A711122 /* Karantina-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8099974B14844A8AE6B5C36 /* Karantina-Bold.ttf */; };
+		04ECBEF06A7D4026B4C21C25 /* Karantina-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E76738158894DB0ADE95BCA /* Karantina-Light.ttf */; };
+		F12218E0F71F490FAF10FDE7 /* Karantina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80368DBF12B641D285A3D4B4 /* Karantina-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +134,11 @@
 		72C916A5AEE947F0B0C36243 /* josefin-slab-latin-700-italic.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-700-italic.woff2"; path = "../assets/fonts/josefin-slab-latin-700-italic.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		EB638A5AAD254A8092FC212E /* josefin-slab-latin-700-normal.woff */ = {isa = PBXFileReference; name = "josefin-slab-latin-700-normal.woff"; path = "../assets/fonts/josefin-slab-latin-700-normal.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		5A961336C144441C90A6B43C /* josefin-slab-latin-700-normal.woff2 */ = {isa = PBXFileReference; name = "josefin-slab-latin-700-normal.woff2"; path = "../assets/fonts/josefin-slab-latin-700-normal.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B4299ED3AC5341AD9AAE34AD /* AkayaKanadaka-Regular.ttf */ = {isa = PBXFileReference; name = "AkayaKanadaka-Regular.ttf"; path = "../assets/fonts/AkayaKanadaka-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		24331278A1FC431BA015B930 /* Jua-Regular.ttf */ = {isa = PBXFileReference; name = "Jua-Regular.ttf"; path = "../assets/fonts/Jua-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C8099974B14844A8AE6B5C36 /* Karantina-Bold.ttf */ = {isa = PBXFileReference; name = "Karantina-Bold.ttf"; path = "../assets/fonts/Karantina-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7E76738158894DB0ADE95BCA /* Karantina-Light.ttf */ = {isa = PBXFileReference; name = "Karantina-Light.ttf"; path = "../assets/fonts/Karantina-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		80368DBF12B641D285A3D4B4 /* Karantina-Regular.ttf */ = {isa = PBXFileReference; name = "Karantina-Regular.ttf"; path = "../assets/fonts/Karantina-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +290,11 @@
 				72C916A5AEE947F0B0C36243 /* josefin-slab-latin-700-italic.woff2 */,
 				EB638A5AAD254A8092FC212E /* josefin-slab-latin-700-normal.woff */,
 				5A961336C144441C90A6B43C /* josefin-slab-latin-700-normal.woff2 */,
+				B4299ED3AC5341AD9AAE34AD /* AkayaKanadaka-Regular.ttf */,
+				24331278A1FC431BA015B930 /* Jua-Regular.ttf */,
+				C8099974B14844A8AE6B5C36 /* Karantina-Bold.ttf */,
+				7E76738158894DB0ADE95BCA /* Karantina-Light.ttf */,
+				80368DBF12B641D285A3D4B4 /* Karantina-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -421,6 +436,11 @@
 				6F80D945E4C44B86B01B0604 /* josefin-slab-latin-700-italic.woff2 in Resources */,
 				35E7B5D051A94C2BBBEE8CCD /* josefin-slab-latin-700-normal.woff in Resources */,
 				C5D9B330B0A2404ABA81B72C /* josefin-slab-latin-700-normal.woff2 in Resources */,
+				4CCA9AAF76A7475AA1615B19 /* AkayaKanadaka-Regular.ttf in Resources */,
+				1B21A7CC4C7142ECBBE245B6 /* Jua-Regular.ttf in Resources */,
+				8D3604E898CA44D18A711122 /* Karantina-Bold.ttf in Resources */,
+				04ECBEF06A7D4026B4C21C25 /* Karantina-Light.ttf in Resources */,
+				F12218E0F71F490FAF10FDE7 /* Karantina-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,6 +20,7 @@ const SlideShow = ({ route, navigation }) => {
   const [selectedMusic, setSelectedMusic] = useState(null);
   const [musicFilePath, setMusicFilePath] = useState('');
   const [title, setTitle] = useState('Make slideshow');
+  const [fontFamily, setFontFamily] = useState('josefin-slab-latin-700-normal');
 
   useEffect(() => {
     const createVideoSlideshow = async () => {
@@ -82,7 +83,7 @@ const SlideShow = ({ route, navigation }) => {
       console.log('Selected Music:', res[0]);
       const musicUri = res[0].uri;
       setSelectedMusic(musicUri);
-      console.log('Selected Music URI:', musicUri);
+      console.log('Selected Music URI:', res[0]);
 
       const musicFilePath = `${RNFS.TemporaryDirectoryPath}/temp_music_file.mp3`;
       await RNFS.copyFile(musicUri, musicFilePath);
@@ -113,8 +114,8 @@ const SlideShow = ({ route, navigation }) => {
           <Image source={require('../../Assets/Movie/back.png')} />
         </TouchableOpacity>
         <View style={styles.header}>
-          <TouchableOpacity onPress={() => navigation.navigate('TitleSlide', { setTitle })}>
-            <Text style={styles.text}>{title}</Text>
+          <TouchableOpacity onPress={() => navigation.navigate('TitleSlide', { setTitle, setFontFamily })}>
+            <Text style={[styles.text, { fontFamily }]}>{title}</Text>  
           </TouchableOpacity>
           <Image source={require('../../Assets/Slide/line.png')} />
           <TouchableOpacity style={styles.volume} onPress={toggleMute}>
@@ -167,7 +168,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 16,
-    fontWeight: '700',
+    fontFamily : 'josefin-slab-latin-700-normal',
     color: '#ffffff',
   },
   volume: {
@@ -184,7 +185,7 @@ const styles = StyleSheet.create({
   textSave: {
     position: 'absolute',
     fontSize: 16,
-    fontWeight: '700',
+    fontFamily : 'josefin-slab-latin-700-normal',
   },
   videoContainer: {
     marginTop: 30,
