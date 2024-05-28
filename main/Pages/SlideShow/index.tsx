@@ -109,6 +109,7 @@ const SlideShow = ({ route, navigation }) => {
         await RNFS.moveFile(videoUri.replace('file://', ''), outputFilePath);
   
         console.log('Video saved successfully:', outputFilePath);
+        navigation.navigate('ResultSlide', {videoUri, selectedMusic})
       } catch (error) {
         console.error('Error saving video:', error);
       }

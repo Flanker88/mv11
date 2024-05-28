@@ -13,7 +13,7 @@ const Home = ({ navigation }: any) => {
 
   return (
     <PaperProvider>
-      <View>
+      <View style={styles.container}>
         <View>
         <Image
           style={styles.circleGreen}
@@ -39,15 +39,7 @@ const Home = ({ navigation }: any) => {
         }}>Poster movie
         </Text>
         <TouchableOpacity
-            style={{
-              width: 125,
-              height: 36,
-              marginTop : 280,
-              right : 40,
-              justifyContent :'center',
-              alignItems : 'center',
-              position : 'absolute'   
-            }}
+            style={styles.search}
             onPress={() => navigation.navigate('PosterMovie')}>
             <Image source={require('../../Assets/Home/Ground.png')} />
             <Text style={styles.buttonText}>Search</Text>
@@ -80,15 +72,7 @@ const Home = ({ navigation }: any) => {
         }}>Slide show
         </Text>
         <TouchableOpacity
-            style={{
-              width: 125,
-              height: 36,
-              marginTop : 400,
-              left : 30,
-              justifyContent :'center',
-              alignItems : 'center',
-              position : 'absolute'   
-            }}
+            style={styles.make}
             onPress={() => navigation.navigate('ImageScreen')}>
             <View style={styles.buttonContent}>
               <Image source={require('../../Assets/Home/Ground.png')} />
@@ -146,6 +130,16 @@ const styles = StyleSheet.create({
     top : 100,
     resizeMode: 'contain',
   },
+  search: {
+    width: 125,
+    height: 36,
+    marginTop: 280,
+    right: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute',
+    zIndex: 1,
+  },
   circleBlue: {
     position: 'absolute',
     width: 382, 
@@ -153,6 +147,16 @@ const styles = StyleSheet.create({
     left: -60, 
     top: 200, 
     resizeMode: 'contain',
+  },
+  make: {
+    width: 125,
+    height: 36,
+    marginTop: 400,
+    left: 30,
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute',
+    zIndex: 1,
   },
   circle: {
     position: 'absolute',

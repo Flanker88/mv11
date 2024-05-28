@@ -92,7 +92,6 @@ const styles = StyleSheet.create({
   movieImage: {
     width: 130,
     height: 180,
-    //borderRadius: 10,
   },
   movieTitle: {
     marginTop: 10,
@@ -103,7 +102,9 @@ const styles = StyleSheet.create({
   },
   errorText: {
     color: '#ff0000',
-    textAlign: 'center',
+    fontSize: 24,
+    fontFamily : 'josefin-slab-latin-700-normal',
+    marginHorizontal : 80
   },
 });
 
