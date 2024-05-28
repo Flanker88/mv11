@@ -17,8 +17,7 @@ const ResultSlide = ({ route, navigation }) => {
   const songName = (currentMusic.name.split('-')[0]).replace(/([A-Z])/g, ' $1').trim();
   const singerName = (currentMusic.name.split('-')[1]).replace(/([A-Z])/g, ' $1').trim();
   const imageUri = `${currentMusic.uri}.png`;
-  console.log(currentMusic,"AAAAAAAA");
-
+  
   const handleChangeMusic = async () => {
     const res = await DocumentPicker.pick({
       type: [DocumentPicker.types.audio],

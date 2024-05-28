@@ -5,6 +5,7 @@ import RNFS from 'react-native-fs';
 import { useNavigation } from '@react-navigation/native';
 import dayjs from 'dayjs';
 import Video from 'react-native-video';
+import Share from 'react-native-share';
 
 const MyFiles = () => {
   const navigation = useNavigation();
@@ -26,23 +27,32 @@ const MyFiles = () => {
     fetchVideoFiles();
   }, []);
 
+  const shareVideo = async (videoPath) => {
+    try {
+      await Share.open({
+        url: `file://${videoPath}`,
+        type: 'video/mp4',
+      });
+    } catch (error) {
+      //console.error('Error sharing video:', error);
+    }
+  };
+
   const renderVideoItem = ({ item }) => {
     const parts = item.split('_');
     const videoName = parts[0];
     const fontFamily = parts[1];
-    const date = parts[2].replace('.mp4', '');
-    const formatDate = dayjs(date, 'YYYY-MM-DD').format('DD/MM/YYYY');
-
+    const date = dayjs(parts[2].replace('.mp4', ''), 'YYYY-MM-DD').format('DD/MM/YYYY');
     const videoPath = `${RNFS.DocumentDirectoryPath}/MyVideos/${item}`;
     
     return (
-      <TouchableOpacity style={styles.videoItem}>
+      <TouchableOpacity style={styles.videoItem} onPress={() => navigation.navigate('Player', { videoPath })}>
         <Video style={styles.video}
           source={{ uri: videoPath }}   
           paused={true}
           controls={false}
         />
-        <TouchableOpacity style={styles.share}>
+        <TouchableOpacity style={styles.share} onPress={() => shareVideo(videoPath)}>
         <Image source={require('../../Assets/File/share.png')} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.option}>
@@ -50,7 +60,7 @@ const MyFiles = () => {
         </TouchableOpacity>
         <Text style={[styles.videoName, { fontFamily }]}>{videoName}</Text>
         <Image style={styles.box} source={require('../../Assets/File/box.png')} />
-        <Text style={[styles.date, { fontFamily }]}>{formatDate}</Text>
+        <Text style={[styles.date, { fontFamily }]}>{date}</Text>
       </TouchableOpacity>
     );
   };
