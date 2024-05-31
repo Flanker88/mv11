@@ -32,7 +32,7 @@
     "react-native-share": "^10.2.1",
     "react-native-svg": "^15.2.0",
     "react-native-thumbnail-video": "^0.1.2",
-    "react-native-video": "6.0.0",
+    "react-native-video": "6.0.0-beta.6",
     "swr": "^2.2.5"
   },
   "devDependencies": {

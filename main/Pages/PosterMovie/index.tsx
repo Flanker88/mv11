@@ -1,97 +1,123 @@
 import * as React from 'react';
-import { 
-  View, 
+import {
+  View,
   Text,
   StyleSheet,
   Image,
   SafeAreaView,
   TouchableOpacity,
-  ScrollView,
-  ActivityIndicator
+  ActivityIndicator,
+  FlatList,
+  Dimensions,
+  Alert,
 } from 'react-native';
 import useSWR from 'swr';
-import { PaperProvider } from 'react-native-paper';
 import SearchBar from '../../Components/SearchBar';
-import { useNavigation } from '@react-navigation/native';
-import { fetcherTMDB } from '../../Config/fetcherTMDB';
+import {fetcherTMDB} from '../../Config/fetcherTMDB';
 
-const PosterMovie = () => {
-  const navigation = useNavigation();
+const {width} = Dimensions.get('window');
+const imgW = (width - 40) / 3;
+
+const PosterMovie = ({navigation}) => {
   const [query, setQuery] = React.useState('');
-  const { data, error, isLoading } = useSWR(
+
+  const {data, error, isLoading} = useSWR(
     query ? `/search/movie?query=${query}` : null,
-    fetcherTMDB
+    fetcherTMDB,
   );
 
-  const handleSearch = (searchQuery) => {
+  const handleSearch = searchQuery => {
     setQuery(searchQuery);
   };
 
+  if (error) {
+    Alert.alert('Fail to loading data!');
+  }
+
   return (
-    <PaperProvider>
-      <SafeAreaView style={styles.container}>
-        <TouchableOpacity style={styles.back} onPress={() => navigation.goBack()}>
+    <SafeAreaView style={styles.container}>
+      <View
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          paddingHorizontal: '3%',
+        }}>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.goBack();
+          }}>
           <Image source={require('../../Assets/Movie/back.png')} />
         </TouchableOpacity>
         <SearchBar onSearch={handleSearch} />
-        <View style={styles.topSearchContainer}>
-          <Text style={styles.topSearchText}>Top search</Text>
-        </View>
-        <ScrollView horizontal contentContainerStyle={styles.resultsContainer}>
-          {isLoading && <ActivityIndicator size="large" color="#fff" />}
-          {error && <Text style={styles.errorText}>Failed to load data</Text>}
-          {data && data.results.map((movie) => (
-            <TouchableOpacity 
-            key={movie.id} 
-            style={styles.movieItem} 
-            onPress={() => navigation.navigate('MovieDetail', { movieID: movie.id })}
-          >
-            <Image 
-              source={{ uri: `https://image.tmdb.org/t/p/w500${movie.poster_path}` }} 
-              style={styles.movieImage} 
-            />
-          </TouchableOpacity>
-          ))}
-        </ScrollView>
-      </SafeAreaView>
-    </PaperProvider>
+      </View>
+      <View style={styles.topSearchContainer}>
+        <Text style={styles.topSearchText}>Top search</Text>
+      </View>
+
+      {isLoading && <ActivityIndicator size="large" color="#fff" />}
+
+      <FlatList
+        data={data?.results}
+        keyExtractor={(_, index) => index.toString()}
+        numColumns={3}
+        renderItem={({item}) => {
+          return (
+            <TouchableOpacity
+              key={item.id}
+              style={styles.movieItem}
+              onPress={() =>
+                navigation.navigate('MovieDetail', {movieID: item.id})
+              }>
+              <Image
+                source={{
+                  uri: `https://image.tmdb.org/t/p/w500${item.poster_path}`,
+                }}
+                style={styles.movieImage}
+              />
+            </TouchableOpacity>
+          );
+        }}
+        columnWrapperStyle={{
+          paddingHorizontal: 10,
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}
+        ListEmptyComponent={
+          <Text style={{textAlign: 'center', color: 'white', fontSize: 17}}>
+            Search the movie above
+          </Text>
+        }
+      />
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  container:{
-    flex: 1, 
-    marginTop : 20,
-    backgroundColor : '#00d147'
-  },  
-  back : {
-    width : 24,
-    height : 24,
-    marginLeft : 20,
-    marginTop : 20,
-    position : 'absolute'
+  container: {
+    flex: 1,
+    backgroundColor: '#00d147',
   },
   topSearchContainer: {
-    marginTop: 10,
+    marginVertical: 10,
     marginHorizontal: 20,
   },
   topSearchText: {
     color: '#ffffff',
     fontSize: 24,
-    fontFamily : 'josefin-slab-latin-700-normal',
   },
   resultsContainer: {
     padding: 10,
-    flexDirection: 'row', 
+    flexDirection: 'row',
   },
   movieItem: {
-    marginBottom: 20,
+    marginBottom: 10,
     alignItems: 'center',
-    marginRight: 15, 
+    marginRight: 10,
   },
   movieImage: {
-    width: 130,
-    height: 180,
+    width: imgW,
+    aspectRatio: 3 / 4,
   },
   movieTitle: {
     marginTop: 10,
@@ -103,8 +129,8 @@ const styles = StyleSheet.create({
   errorText: {
     color: '#ff0000',
     fontSize: 24,
-    fontFamily : 'josefin-slab-latin-700-normal',
-    marginHorizontal : 80
+
+    marginHorizontal: 80,
   },
 });
 

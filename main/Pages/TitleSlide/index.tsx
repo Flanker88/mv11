@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
-import { 
-    View, 
-    Text,
-    TextInput,
-    StyleSheet, 
-    TouchableOpacity,
-    Image,
+import React, {useState} from 'react';
+import {
+  View,
+  Text,
+  TextInput,
+  StyleSheet,
+  TouchableOpacity,
+  Image,
+  SafeAreaView,
 } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
+import fonts from '../../constant/fonts';
 
 const TitleSlide = ({route}) => {
-  const { setTitle, setFontFamily } = route.params;
+  const {setTitle, setFontFamily} = route.params;
   const [title, setTitleInput] = useState('');
-  const [fontFamily, setFontFamilyInput] = useState('josefin-slab-latin-700-normal');
+  const [fontFamily, setFontFamilyInput] = useState(fonts.semibold);
   const [selectedFont, setSelectedFont] = useState(0);
   const navigation = useNavigation();
 
@@ -28,47 +30,65 @@ const TitleSlide = ({route}) => {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <TouchableOpacity style={styles.back} onPress={() => navigation.goBack()}>
         <Text style={styles.text}>Cancel</Text>
       </TouchableOpacity>
       <View style={styles.box}>
-      <TextInput
-        style={[styles.input, { fontFamily }]}
-        placeholder="Enter title slide show"
-        placeholderTextColor={'#999999'}
-        value={title}
-        onChangeText={setTitleInput}
-      />
+        <TextInput
+          style={[styles.input, {fontFamily}]}
+          placeholder="Enter title slide show"
+          placeholderTextColor={'#999999'}
+          value={title}
+          onChangeText={setTitleInput}
+        />
         <View style={styles.listFont}>
-        <TouchableOpacity style={styles.font1} onPress={() => handleFontChange('josefin-slab-latin-700-normal', 0)}>
-            <Image source={selectedFont === 0 ? require('../../Assets/EditSlide/Blue.png') : require('../../Assets/EditSlide/White.png')} />
-            <Image style={styles.font} source={require('../../Assets/EditSlide/font1.png')} />
+          <TouchableOpacity
+            style={[
+              styles.font1,
+              {backgroundColor: selectedFont === 0 ? 'blue' : 'white'},
+            ]}
+            onPress={() => handleFontChange(fonts.bold, 0)}>
+            <Image source={require('../../Assets/EditSlide/font1.png')} />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.font1} onPress={() => handleFontChange('AkayaKanadaka-Regular', 1)}>
-            <Image source={selectedFont === 1 ? require('../../Assets/EditSlide/Blue.png') : require('../../Assets/EditSlide/White.png')} />
-            <Image style={styles.font} source={require('../../Assets/EditSlide/font2.png')} />
+          <TouchableOpacity
+            style={[
+              styles.font1,
+              {backgroundColor: selectedFont === 1 ? 'blue' : 'white'},
+            ]}
+            onPress={() => handleFontChange(fonts.light, 1)}>
+            <Image source={require('../../Assets/EditSlide/font2.png')} />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.font1} onPress={() => handleFontChange('SFPro-Regular', 2)}>
-            <Image source={selectedFont === 2 ? require('../../Assets/EditSlide/Blue.png') : require('../../Assets/EditSlide/White.png')} />
-            <Image style={styles.font} source={require('../../Assets/EditSlide/font3.png')} />
+          <TouchableOpacity
+            style={[
+              styles.font1,
+              {backgroundColor: selectedFont === 2 ? 'blue' : 'white'},
+            ]}
+            onPress={() => handleFontChange(fonts.medium, 2)}>
+            <Image source={require('../../Assets/EditSlide/font3.png')} />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.font1} onPress={() => handleFontChange('Jua-Regular', 3)}>
-            <Image source={selectedFont === 3 ? require('../../Assets/EditSlide/Blue.png') : require('../../Assets/EditSlide/White.png')} />
-            <Image style={styles.font} source={require('../../Assets/EditSlide/font4.png')} />
+          <TouchableOpacity
+            style={[
+              styles.font1,
+              {backgroundColor: selectedFont === 3 ? 'blue' : 'white'},
+            ]}
+            onPress={() => handleFontChange(fonts.regular, 3)}>
+            <Image source={require('../../Assets/EditSlide/font4.png')} />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.font1} onPress={() => handleFontChange('Karantina-Regular', 4)}>
-            <Image source={selectedFont === 4 ? require('../../Assets/EditSlide/Blue.png') : require('../../Assets/EditSlide/White.png')} />
-            <Image style={styles.font} source={require('../../Assets/EditSlide/font5.png')} />
+          <TouchableOpacity
+            style={[
+              styles.font1,
+              {backgroundColor: selectedFont === 4 ? 'blue' : 'white'},
+            ]}
+            onPress={() => handleFontChange(fonts.semibold, 4)}>
+            <Image source={require('../../Assets/EditSlide/font5.png')} />
           </TouchableOpacity>
-
         </View>
-      <TouchableOpacity style={styles.save} onPress={handleSave}>
-        <Image source={require('../../Assets/EditSlide/Save.png')} />
-        <Text style={styles.textSave}>Save</Text>
-      </TouchableOpacity>
+        <TouchableOpacity style={styles.save} onPress={handleSave}>
+          <Text style={styles.textSave}>Save</Text>
+        </TouchableOpacity>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -76,55 +96,54 @@ export default TitleSlide;
 
 const styles = StyleSheet.create({
   container: {
-    flex : 1,
+    flex: 1,
   },
-  box : {
-    justifyContent : 'center',
-    alignItems : 'center',
-    marginTop : 100,
+  box: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 100,
   },
-  font : {
-    position : 'absolute',
-    top : 15,
+
+  font1: {
+    width: 50,
+    height: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginHorizontal: 10,
+    borderRadius: 50,
   },
-  font1 : {
-    width : 50,
-    height : 50,
-    justifyContent : 'center',
-    alignItems : 'center',
-    marginHorizontal  : 10,
-    
-  },
-  listFont : {
-    flexDirection : 'row',
+  listFont: {
+    flexDirection: 'row',
   },
   input: {
     height: 70,
     width: '80%',
     marginBottom: 20,
-    fontSize : 22,
+    fontSize: 22,
     paddingHorizontal: 50,
-    borderBottomWidth : 1,
-    borderColor : '#107eff',
-    //fontFamily : 'josefin-slab-latin-700-normal',
+    borderBottomWidth: 1,
+    borderColor: '#107eff',
+    //
   },
-  back : {
-    marginLeft : 20,
-    marginTop : 40,
+  back: {
+    marginLeft: 20,
   },
-  text : {
-    fontSize : 16,
-    fontFamily : 'josefin-slab-latin-700-normal',
-    color : '#0B7BFF'
+  text: {
+    fontSize: 16,
+    color: '#0B7BFF',
   },
-  save : {
-    alignItems : 'center'
+  save: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 8,
+    width: '30%',
+    backgroundColor: '#0B7BFF',
+    marginTop: 20,
+    borderRadius: 20,
   },
-  textSave : {
-    fontSize : 20,
-    fontFamily : 'josefin-slab-latin-700-normal',
-    position : 'absolute',
-    color : '#FFFFFF',
-    marginTop : 22,
-  }
-})
+  textSave: {
+    fontSize: 18,
+    color: '#FFFFFF',
+    fontFamily: fonts.light,
+  },
+});

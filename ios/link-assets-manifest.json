@@ -2,192 +2,24 @@
   "migIndex": 1,
   "data": [
     {
-      "path": "assets/fonts/AkayaKanadaka-Regular.ttf",
-      "sha1": "8b20df1f73aa9030ad4771ffd0c55e1758e45086"
+      "path": "main/Assets/font/Inter-Bold.ttf",
+      "sha1": "47ff07c75746682133b81e7ac0537ce50a4c9916"
     },
     {
-      "path": "assets/fonts/josefin-slab-latin-100-italic.ttf",
-      "sha1": "e638b4aa9e86aa499e66dda822d04175054cc87c"
+      "path": "main/Assets/font/Inter-Light.ttf",
+      "sha1": "cbb2506d8da21edbb2dc8cfa26e3b42a97d138f8"
     },
     {
-      "path": "assets/fonts/josefin-slab-latin-100-italic.woff",
-      "sha1": "b8babd84bf3f91c2a8d14f19c836c5207dd5e9cb"
+      "path": "main/Assets/font/Inter-Medium.ttf",
+      "sha1": "e76f580811e031813e7150131a0724811cdd737a"
     },
     {
-      "path": "assets/fonts/josefin-slab-latin-100-italic.woff2",
-      "sha1": "b376d873e9b61db2bd9c583a364ff0a7db7433ac"
+      "path": "main/Assets/font/Inter-Regular.ttf",
+      "sha1": "cfa780d0b50b2bb7eacb82984f1b18a95aaa40c5"
     },
     {
-      "path": "assets/fonts/josefin-slab-latin-100-normal.ttf",
-      "sha1": "18b6a5de0c9ce86a920c9d9b0ab6d338e54272c6"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-100-normal.woff",
-      "sha1": "f6a318a1e88c367476f33fe2ccb498f63257f018"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-100-normal.woff2",
-      "sha1": "886c0018b0652ed71f327b9d64f8aa533c471cb1"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-200-italic.ttf",
-      "sha1": "8f72bbe80b4e1ab169a7c60a4332aea827be8af0"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-200-italic.woff",
-      "sha1": "b063eba35d8bfd61a408c3160c8b9276434a7c5e"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-200-italic.woff2",
-      "sha1": "6aa659dbf38a754d42975c6e7520afb41621fe81"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-200-normal.ttf",
-      "sha1": "f29dfa8cd61366c978aa458fbe90c225c837c031"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-200-normal.woff",
-      "sha1": "f766f1c70c9779097b006033b4cd4bdf61c41721"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-200-normal.woff2",
-      "sha1": "2ef2c621b2b311974d2ebf99c336c4b0ddf9f80c"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-300-italic.ttf",
-      "sha1": "7c5c774131a7d9910b31379e7643c0150cdbe38f"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-300-italic.woff",
-      "sha1": "c87432fe89f23a4155f8f1f4431fd7b746bf149d"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-300-italic.woff2",
-      "sha1": "ae75dcd7662fa65ef6d249555a0560018f59e575"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-300-normal.ttf",
-      "sha1": "3a2c00886411ff8802b56f66a3856a3c097f7bf0"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-300-normal.woff",
-      "sha1": "d29cbd1c70b5c68260e66ab283b3d864c56b25b0"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-300-normal.woff2",
-      "sha1": "c2f760042a9e0ea405c74faf3941878d41e9e83d"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-400-italic.ttf",
-      "sha1": "e4ac851af3d6d76a9c17de2e06e6ee387f6d79b2"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-400-italic.woff",
-      "sha1": "7cf4a8f0afacbdf072c001dd042847b0d9048ecd"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-400-italic.woff2",
-      "sha1": "de88fc140f0ce6ac7c4addca1f9cd3c9c055e229"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-400-normal.ttf",
-      "sha1": "fd9c240000627f359e65c011ebc20d730ff81f3f"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-400-normal.woff",
-      "sha1": "018cf44df009e2e995a42806e5ef4e025313babd"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-400-normal.woff2",
-      "sha1": "1095980aaeea0e1a8efe421d5c18abe559c5e171"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-500-italic.ttf",
-      "sha1": "3240ed7c4d579aab7756437adc94de22d03cae1d"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-500-italic.woff",
-      "sha1": "a01b96d05a8be6d8a1339464d0395aadbb995766"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-500-italic.woff2",
-      "sha1": "55208980de3eba5db3770ae9da6c119632f83109"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-500-normal.ttf",
-      "sha1": "787dd2f7a98c0f21901269d4bc3c050fb8ab8c65"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-500-normal.woff",
-      "sha1": "752f9b1a31cb0f5028b0c0416dc9ba3e612dce53"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-500-normal.woff2",
-      "sha1": "c902a8c8bce002f8f79e9f14db5c0ccb0b3210bc"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-600-italic.ttf",
-      "sha1": "e630801d29a57d01d30018cca2d9c6af61645bec"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-600-italic.woff",
-      "sha1": "d955ce1bde54da6abdf99899ad4337a57780059f"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-600-italic.woff2",
-      "sha1": "9e8e61e2832e4b2b6db20d998bef7268a0a11e00"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-600-normal.ttf",
-      "sha1": "5fe050c75c34ea0693ef608c9f5c39a75aa01067"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-600-normal.woff",
-      "sha1": "4ce98333fcba4e895f64bc2d322a841b877685e8"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-600-normal.woff2",
-      "sha1": "080be16b8cb78a69a06720aebce38753a2f6307e"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-700-italic.ttf",
-      "sha1": "5f3b2cd5983000b83bc203b3b7c02cdc641e215d"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-700-italic.woff",
-      "sha1": "3c9320cbcdad4a46aec58ceeeab05ca87be9f07a"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-700-italic.woff2",
-      "sha1": "aa6c93eaf38a46150a18168613fb4745ccefb6c4"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-700-normal.ttf",
-      "sha1": "36ebf659dfd9df7c38581a382967fbb3e3396eb7"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-700-normal.woff",
-      "sha1": "fea7864f6549f070c91da67356acfc37b64f69fd"
-    },
-    {
-      "path": "assets/fonts/josefin-slab-latin-700-normal.woff2",
-      "sha1": "11d0ff1cb5ade485568e0aa1ec17ca4a7de9cff5"
-    },
-    {
-      "path": "assets/fonts/Jua-Regular.ttf",
-      "sha1": "9122d54d461d57735caeeb843b9961a96225468b"
-    },
-    {
-      "path": "assets/fonts/Karantina-Bold.ttf",
-      "sha1": "bedc5cce95e752c58b0adfef4e199ff83654e178"
-    },
-    {
-      "path": "assets/fonts/Karantina-Light.ttf",
-      "sha1": "42824d7da7b70c178fa466440ba7f6f20a92c868"
-    },
-    {
-      "path": "assets/fonts/Karantina-Regular.ttf",
-      "sha1": "eaa32d0235a80621d0f616cf2ef216433237de7a"
+      "path": "main/Assets/font/Inter-SemiBold.ttf",
+      "sha1": "5e0c44e57e7e090252d79f622899e67585bb892c"
     }
   ]
 }

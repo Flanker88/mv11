@@ -1,105 +1,115 @@
 import * as React from 'react';
-import { 
-  View, 
+import {
+  View,
   StyleSheet,
   Image,
   TouchableOpacity,
   FlatList,
-
- } from 'react-native';
-import { PaperProvider } from 'react-native-paper';
+  SafeAreaView,
+  Dimensions,
+  Alert,
+} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import RNFS from 'react-native-fs';
 
-const ImageVideo = ({ route }) => {
-  const { selectedImages } = route.params;
+const {width} = Dimensions.get('window');
+const imgW = (width - 60) / 3;
+const imgH = (imgW * 4.5) / 3;
+
+const ImageVideo = ({route}) => {
+  const {selectedImages} = route.params;
   const navigation = useNavigation();
   const [images, setImages] = React.useState([]);
+  const imagesWithAddButton = [{type: 'add'}, ...images];
 
   React.useEffect(() => {
-    const loadImages = async () => {
-      try {
-        const imageURIs = await Promise.all(
-          selectedImages.map(async (image) => {
-            const base64Image = await RNFS.readFile(image, 'base64');
-            return `data:image/png;base64,${base64Image}`;
-          })
-        );
-        setImages(imageURIs);
-      } catch (error) {
-        console.error('Error loading images:', error);
-      }
-    };
-
     loadImages();
   }, [selectedImages]);
 
-  const imagesWithAddButton = [{ type: 'add' }, ...images];
+  const loadImages = async () => {
+    try {
+      const imageURIs = await Promise.all(
+        selectedImages.map(async image => {
+          const base64Image = await RNFS.readFile(image, 'base64');
+          return `data:image/png;base64,${base64Image}`;
+        }),
+      );
+      setImages(imageURIs);
+    } catch (error) {
+      Alert.alert('Error when loading images');
+    }
+  };
 
   return (
-    <PaperProvider>
-      <View style={styles.container}>
-        <TouchableOpacity style={styles.back} onPress={() => { navigation.goBack() }}>
-          <Image source={require('../../Assets/Movie/back.png')} />
-        </TouchableOpacity>
-        <View style={styles.flatList}>
+    <SafeAreaView style={styles.container}>
+      <TouchableOpacity
+        style={styles.back}
+        onPress={() => {
+          navigation.goBack();
+        }}>
+        <Image source={require('../../Assets/Movie/back.png')} />
+      </TouchableOpacity>
+      <View style={styles.flatList}>
         <FlatList
           data={imagesWithAddButton}
           keyExtractor={(item, index) => index.toString()}
-          renderItem={({ item, index }) => {
+          renderItem={({item, index}) => {
             if (item.type === 'add') {
               return (
-                <TouchableOpacity style={styles.add} onPress={() => navigation.navigate('PosterMovie')}>
-                  <Image source={require('../../Assets/EditSlide/Frame.png')} />
-                  <Image style={styles.plus} source={require('../../Assets/EditSlide/Plus.png')} />
+                <TouchableOpacity
+                  style={[styles.add, styles.image]}
+                  onPress={() => navigation.navigate('PosterMovie')}>
+                  <Image
+                    style={styles.plus}
+                    source={require('../../Assets/EditSlide/Plus.png')}
+                  />
                 </TouchableOpacity>
               );
             } else {
-              return <Image source={{ uri: item }} style={styles.image} />;
+              return <Image source={{uri: item}} style={styles.image} />;
             }
           }}
           numColumns={3}
+          columnWrapperStyle={{marginBottom: 6}}
         />
-        </View>
       </View>
-    </PaperProvider>
+    </SafeAreaView>
   );
 };
 
-
 const styles = StyleSheet.create({
-  container:{
-    flex: 1, 
-    marginTop : 20,
-    backgroundColor : '#0b7bff'
-  },  
-  back : {
-    width : 24,
-    height : 24,
-    marginLeft : 20,
-    marginTop : 20,
+  container: {
+    flex: 1,
+    backgroundColor: '#0b7bff',
   },
-  add : {
-    justifyContent : 'center',
-    alignItems : 'center',
-    marginLeft : 8,
-    marginBottom : 10
+  back: {
+    width: 24,
+    height: 24,
+    marginLeft: 20,
+    marginTop: 20,
   },
-  plus : {
-    position : 'absolute',
+  add: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderStyle: 'dashed',
+    borderWidth: 1,
+    borderColor: 'white',
+    backgroundColor: '#00000040',
+    marginRight: 10,
   },
-  flatList : {
-    justifyContent : 'center',
-    alignItems : 'center',
-    marginTop : 20,
+  plus: {
+    position: 'absolute',
+  },
+  flatList: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 10,
   },
   image: {
-    width: 111,
-    height: 164,
-    marginBottom: 10,
-    marginHorizontal : 8,
+    width: imgW,
+    height: imgH,
+    marginRight: 10,
   },
-
 });
 
 export default ImageVideo;

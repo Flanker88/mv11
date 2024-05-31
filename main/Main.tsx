@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import MyFiles from './Pages/MyFiles';
 import PosterMovie from './Pages/PosterMovie';
 import SlideShow from './Pages/SlideShow';
@@ -16,80 +17,82 @@ const Stack = createNativeStackNavigator();
 
 const Main = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{
-            headerShown: false,
-          }}
-        />
-        <Stack.Screen 
-        name="PosterMovie" 
-        component={PosterMovie}
-        options={{
-          headerShown: false,
-        }} 
-        />
-        <Stack.Screen 
-        name="MovieDetail" 
-        component={MovieDetail}
-        options={{
-          headerShown: false,
-        }} 
-        />
-        <Stack.Screen 
-        name="ImageScreen" 
-        component={ImageScreen}
-        options={{
-          headerShown: false,
-        }} 
-        />
-        <Stack.Screen 
-        name="MyFiles" 
-        component={MyFiles} 
-        options={{
-          headerShown: false,
-        }}
-        />
-        <Stack.Screen 
-        name="ResultSlide" 
-        component={ResultSlide} 
-        options={{
-          headerShown: false,
-        }}
-        />
-        <Stack.Screen 
-        name="SlideShow" 
-        component={SlideShow} 
-        options={{
-          headerShown: false,
-        }}
-        />
-        <Stack.Screen 
-        name="TitleSlide" 
-        component={TitleSlide} 
-        options={{
-          headerShown: false,
-        }}
-        />
-        <Stack.Screen 
-        name="ImageVideo" 
-        component={ImageVideo} 
-        options={{
-          headerShown: false,
-        }}
-        />
-        <Stack.Screen 
-        name="Player" 
-        component={Player} 
-        options={{
-          headerShown: false,
-        }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <GestureHandlerRootView style={{flex: 1}}>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="PosterMovie"
+            component={PosterMovie}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="MovieDetail"
+            component={MovieDetail}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="ImageScreen"
+            component={ImageScreen}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="MyFiles"
+            component={MyFiles}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="ResultSlide"
+            component={ResultSlide}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="SlideShow"
+            component={SlideShow}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="TitleSlide"
+            component={TitleSlide}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="ImageVideo"
+            component={ImageVideo}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="Player"
+            component={Player}
+            options={{
+              headerShown: false,
+            }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </GestureHandlerRootView>
   );
 };
 

@@ -1,68 +1,71 @@
-import React, { useEffect, useState } from 'react';
-import { 
-  View, 
-  Image, 
-  StyleSheet, 
+import React, {useEffect, useState} from 'react';
+import {
+  View,
+  Image,
+  StyleSheet,
   Text,
-  TouchableOpacity, 
+  TouchableOpacity,
+  SafeAreaView,
+  Dimensions,
+  Alert,
 } from 'react-native';
-import Video from 'react-native-video';  
-import { FFmpegKit } from 'ffmpeg-kit-react-native';
+import Video from 'react-native-video';
+import {FFmpegKit} from 'ffmpeg-kit-react-native';
 import RNFS from 'react-native-fs';
-import { PaperProvider } from 'react-native-paper';
 import DocumentPicker from 'react-native-document-picker';
+import fonts from '../../constant/fonts';
 
-const SlideShow = ({ route, navigation }) => {
-  const { selectedImages } = route.params;
+const {height} = Dimensions.get('window');
+
+const SlideShow = ({route, navigation}) => {
+  const {selectedImages} = route.params;
   const [videoUri, setVideoUri] = useState('');
   const [isMute, setIsMute] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [selectedMusic, setSelectedMusic] = useState(null);
   const [musicFilePath, setMusicFilePath] = useState('');
-  const [title, setTitle] = useState('Make slideshow');
-  const [fontFamily, setFontFamily] = useState('josefin-slab-latin-700-normal');
+  const [title, setTitle] = useState('');
+  const [fontFamily, setFontFamily] = useState(fonts.bold);
 
   useEffect(() => {
     const createVideoSlideshow = async () => {
       if (selectedImages.length === 0) return;
-      console.log(selectedImages,"AAABBB")
-  
+
       const timestamp = new Date().getTime();
-      const outputPath = `${RNFS.DocumentDirectoryPath}/slideshow_${timestamp}.mp4`;
-  
-      const inputFiles = selectedImages.map(image => `-loop 1 -t 2 -i "${image}"`).join(' ');
-  
-      const filterComplex = selectedImages.map(
-        (_, index) => `[${index}:v]scale=720:1280:force_original_aspect_ratio=decrease,pad=720:1280:(ow-iw)/2:(oh-ih)/2,setsar=1[v${index}]`
-      ).join('; ') + '; ' +
-      selectedImages.map(
-        (_, index) => `[v${index}]`
-      ).join('') + `concat=n=${selectedImages.length}:v=1:a=0,format=yuv420p[v]`;
+      const outputPath = `${RNFS.DocumentDirectoryPath}/slideshow_${
+        timestamp + Math.floor(Math.random() * Math.random())
+      }.mp4`;
+
+      const inputFiles = selectedImages
+        .map(image => `-loop 1 -t 2 -i "${image}"`)
+        .join(' ');
+
+      const filterComplex =
+        selectedImages
+          .map(
+            (_, index) =>
+              `[${index}:v]scale=720:1280:force_original_aspect_ratio=decrease,pad=720:1280:(ow-iw)/2:(oh-ih)/2,setsar=1[v${index}]`,
+          )
+          .join('; ') +
+        '; ' +
+        selectedImages.map((_, index) => `[v${index}]`).join('') +
+        `concat=n=${selectedImages.length}:v=1:a=0,format=yuv420p[v]`;
 
       let ffmpegCommand;
 
       if (musicFilePath) {
-        console.log("Temporary Music Path:", musicFilePath);
         ffmpegCommand = `${inputFiles} -i "${musicFilePath}" -filter_complex "${filterComplex}" -map "[v]" -map ${selectedImages.length}:a -fps_mode vfr -pix_fmt yuv420p -shortest ${outputPath}`;
       } else {
         ffmpegCommand = `${inputFiles} -filter_complex "${filterComplex}" -map "[v]" -fps_mode vfr -pix_fmt yuv420p ${outputPath}`;
       }
-  
-      console.log('FFmpeg Command:', ffmpegCommand);
-  
-      await FFmpegKit.executeAsync(ffmpegCommand, async (session) => {
-        const outputUri = `file://${outputPath}`;
-        console.log('FFmpeg process succeeded, output URI:', outputUri);
-        setVideoUri(outputUri);
+
+      await FFmpegKit.executeAsync(ffmpegCommand, async session => {
+        setVideoUri(outputPath);
       });
     };
-  
-    createVideoSlideshow();
-  }, [selectedImages, musicFilePath]);  
 
-  useEffect(() => {
-    console.log('Video URI:', videoUri);
-  }, [videoUri]);
+    createVideoSlideshow();
+  }, [selectedImages, musicFilePath]);
 
   const toggleMute = () => {
     setIsMute(prevIsMute => !prevIsMute);
@@ -76,19 +79,15 @@ const SlideShow = ({ route, navigation }) => {
     try {
       const res = await DocumentPicker.pick({
         type: [DocumentPicker.types.audio],
-      }); 
-      console.log('Selected Music:', res[0]);
+      });
       const musicUri = res[0].uri;
-      setSelectedMusic(res[0] );
+      setSelectedMusic(res[0]);
 
       const musicFilePath = `${RNFS.TemporaryDirectoryPath}/temp_music_file.mp3`;
       await RNFS.copyFile(musicUri, musicFilePath);
-      console.log('Temporary Music Path:', musicFilePath);
       setMusicFilePath(musicFilePath);
-
     } catch (err) {
       if (DocumentPicker.isCancel(err)) {
-        console.log('User cancelled the picker');
       } else {
         throw err;
       }
@@ -96,68 +95,110 @@ const SlideShow = ({ route, navigation }) => {
   };
 
   const saveVideo = async () => {
+    if (title.length === 0) {
+      return Alert.alert('Enter your slider name!');
+    }
+
     if (videoUri) {
       try {
         const currentDate = new Date();
-        const formattedDate = `${currentDate.getFullYear()}-${(currentDate.getMonth() + 1).toString().padStart(2, '0')}-${currentDate.getDate().toString().padStart(2, '0')}`;
+        const formattedDate = `${currentDate.getFullYear()}-${(
+          currentDate.getMonth() + 1
+        )
+          .toString()
+          .padStart(2, '0')}-${currentDate
+          .getDate()
+          .toString()
+          .padStart(2, '0')}`;
 
         const outputFilename = `${title}_${fontFamily}_${formattedDate}.mp4`;
         const outputDirectory = `${RNFS.DocumentDirectoryPath}/MyVideos`;
         const outputFilePath = `${outputDirectory}/${outputFilename}`;
-  
+
         await RNFS.mkdir(outputDirectory);
         await RNFS.moveFile(videoUri.replace('file://', ''), outputFilePath);
-  
-        console.log('Video saved successfully:', outputFilePath);
-        navigation.navigate('ResultSlide', {videoUri, selectedMusic})
+
+        setTitle('');
+
+        navigation.navigate('ResultSlide', {
+          videoUri: outputFilePath,
+          selectedMusic,
+        });
       } catch (error) {
-        console.error('Error saving video:', error);
+        Alert.alert('Error when saving video!');
       }
     } else {
-      console.log('No video URI available to save');
+      Alert.alert('No video URI available to save');
     }
   };
-  
+
   return (
-    <PaperProvider>
-      <View style={styles.container}>
-        <TouchableOpacity style={styles.back} onPress={() => navigation.goBack()}>
+    <SafeAreaView style={styles.container}>
+      <View
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          paddingHorizontal: '3%',
+        }}>
+        <TouchableOpacity
+          style={styles.back}
+          onPress={() => navigation.goBack()}>
           <Image source={require('../../Assets/Movie/back.png')} />
         </TouchableOpacity>
+
         <View style={styles.header}>
-          <TouchableOpacity onPress={() => navigation.navigate('TitleSlide', { setTitle, setFontFamily })}>
-            <Text style={[styles.text, { fontFamily }]}>{title}</Text>  
+          <TouchableOpacity
+            onPress={() =>
+              navigation.navigate('TitleSlide', {setTitle, setFontFamily})
+            }>
+            <Text style={styles.text}>
+              {title.length > 0 ? title : 'Slider name'}
+            </Text>
           </TouchableOpacity>
-          <Image source={require('../../Assets/Slide/line.png')} />
           <TouchableOpacity style={styles.volume} onPress={toggleMute}>
-            <Image source={isMute ? require('../../Assets/Slide/volume-slash.png') : require('../../Assets/Slide/volume.png')} />
+            <Image
+              source={
+                isMute
+                  ? require('../../Assets/Slide/volume-slash.png')
+                  : require('../../Assets/Slide/volume.png')
+              }
+            />
           </TouchableOpacity>
-        </View>
-        <TouchableOpacity style={styles.save} onPress={saveVideo}>
-          <Image source={require('../../Assets/Slide/save.png')} />
-          <Text style={styles.textSave}>Save</Text>
-        </TouchableOpacity>
-        <View style={styles.videoContainer}>
-          <Video 
-            source={{ uri: videoUri }} 
-            style={styles.video} 
-            paused={!isPlaying}
-            muted={isMute}
-          />
-        </View>
-        <View style={styles.bar}>
-          <TouchableOpacity style={styles.music} onPress={selectMusic}>
-            <Image source={require('../../Assets/Slide/music.png')} />
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.play} onPress={togglePlayPause}>
-            <Image source={isPlaying ? require('../../Assets/Slide/pause.png') : require('../../Assets/Slide/play.png')} />
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.menu} onPress={() => navigation.navigate('ImageVideo', { selectedImages })}>
-            <Image source={require('../../Assets/Slide/menu.png')} />
+          <TouchableOpacity style={styles.save} onPress={saveVideo}>
+            <Text style={styles.textSave}>Save</Text>
           </TouchableOpacity>
         </View>
       </View>
-    </PaperProvider>
+
+      <View style={styles.videoContainer}>
+        <Video
+          source={{uri: videoUri}}
+          style={styles.video}
+          paused={!isPlaying}
+          muted={isMute}
+        />
+      </View>
+
+      <View style={styles.bar}>
+        <TouchableOpacity onPress={selectMusic}>
+          <Image source={require('../../Assets/Slide/music.png')} />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={togglePlayPause}>
+          <Image
+            source={
+              isPlaying
+                ? require('../../Assets/Slide/pause.png')
+                : require('../../Assets/Slide/play.png')
+            }
+          />
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('ImageVideo', {selectedImages})}>
+          <Image source={require('../../Assets/Slide/menu.png')} />
+        </TouchableOpacity>
+      </View>
+    </SafeAreaView>
   );
 };
 
@@ -169,35 +210,34 @@ const styles = StyleSheet.create({
   back: {
     width: 24,
     height: 24,
-    marginLeft: 20,
-    marginTop: 35,
   },
   header: {
-    marginLeft: 60,
-    marginVertical: 35,
-    position: 'absolute',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    borderBottomWidth: 1,
+    borderBottomColor: 'white',
+    width: '90%',
+    borderBottomRightRadius: 20,
   },
   text: {
     fontSize: 16,
-    fontFamily : 'josefin-slab-latin-700-normal',
     color: '#ffffff',
   },
   volume: {
-    position: 'absolute',
-    marginLeft: 220,
-    bottom : 5
+    width: '40%',
+    alignItems: 'flex-end',
   },
   save: {
-    position: 'absolute',
-    marginLeft: 310,
-    marginTop: 18,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: 'white',
+    width: '20%',
+    padding: 6,
+    borderRadius: 20,
   },
   textSave: {
-    position: 'absolute',
     fontSize: 16,
-    fontFamily : 'josefin-slab-latin-700-normal',
   },
   videoContainer: {
     marginTop: 30,
@@ -207,24 +247,13 @@ const styles = StyleSheet.create({
   },
   video: {
     width: '100%',
-    height: 605,
+    height: height * 0.7,
   },
   bar: {
+    flex: 1,
+    flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: 20,
-  },
-  music: {
-    marginRight: 300,
-    marginTop: 30,
-  },
-  play: {
-    top: 20,
-    position: 'absolute',
-  },
-  menu: {
-    right: 50,
-    top: 30,
-    position: 'absolute',
+    justifyContent: 'space-around',
   },
 });
 

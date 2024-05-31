@@ -1,56 +1,47 @@
-import React, {useState} from 'react';
-import { 
-  View, 
-  StyleSheet, 
-  Text, 
-  TouchableOpacity, 
-  Image
+import React from 'react';
+import {
+  View,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  Image,
+  SafeAreaView,
+  Dimensions,
 } from 'react-native';
 import Video from 'react-native-video';
-import { PaperProvider } from 'react-native-paper';
-import DocumentPicker from 'react-native-document-picker';
+import fonts from '../../constant/fonts';
 
-const ResultSlide = ({ route, navigation }) => {
-  const { videoUri, selectedMusic } = route.params;
-  const [currentMusic, setCurrentMusic] = useState(selectedMusic);
+const {width, height} = Dimensions.get('window');
+const videoW = width * 0.85;
+const videoH = height * 0.65;
 
-  const songName = (currentMusic.name.split('-')[0]).replace(/([A-Z])/g, ' $1').trim();
-  const singerName = (currentMusic.name.split('-')[1]).replace(/([A-Z])/g, ' $1').trim();
-  const imageUri = `${currentMusic.uri}.png`;
-  
-  const handleChangeMusic = async () => {
-    const res = await DocumentPicker.pick({
-      type: [DocumentPicker.types.audio],
-    });
-    setCurrentMusic(res[0]);
-  }
+const ResultSlide = ({route, navigation}) => {
+  const {videoUri, selectedMusic} = route.params;
 
   return (
-    <PaperProvider>
-      <View style={styles.container}>
-        <TouchableOpacity style={styles.back} onPress={() => navigation.goBack()}>
+    <SafeAreaView style={styles.container}>
+      <TouchableOpacity
+        onPress={() => navigation.goBack()}
+        style={{marginLeft: 10}}>
         <Image source={require('../../Assets/Movie/back.png')} />
-        </TouchableOpacity>
-        <View style={styles.videoContainer}>
-          <Video 
-            source={{ uri: videoUri }} 
-            style={styles.video} 
-            //controls={true}
-          />
-          {selectedMusic && (
-            <View style={styles.song}>
-              <Image style={styles.imgSong} source={{ uri: imageUri }}/>
-              <Text style={styles.nameSong}>{songName}</Text>
-              <Text style={styles.nameSinger}>{singerName}</Text>
-              <TouchableOpacity style={styles.change} onPress={handleChangeMusic}>
-                <Image source={require('../../Assets/EditSlide/Change.png')} />
-                <Text style={styles.textChange}>Change</Text>
-              </TouchableOpacity>
-            </View>
-          )}
+      </TouchableOpacity>
+
+      <Video source={{uri: videoUri}} style={styles.video} />
+
+      {selectedMusic && (
+        <View style={styles.songContainer}>
+          <View style={styles.song}>
+            <Image
+              style={styles.imgSong}
+              source={require('../../Assets/Slide/music.png')}
+            />
+            <Text numberOfLines={2} style={styles.nameSong}>
+              {selectedMusic?.name}
+            </Text>
+          </View>
         </View>
-      </View>
-    </PaperProvider>
+      )}
+    </SafeAreaView>
   );
 };
 
@@ -58,57 +49,35 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#0b7bff',
+  },
+  songContainer: {
+    flex: 1,
+    marginTop: 20,
+    alignSelf: 'center',
     justifyContent: 'center',
+  },
+  song: {
+    borderRadius: 20,
+    backgroundColor: '#0657b5',
+    width: width * 0.8,
+    flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingVertical: 16,
+    paddingHorizontal: 10,
   },
-  song : {
-    width : 363,
-    height : 83,
-    marginTop : 20,
-    borderRadius : 20,
-    backgroundColor : '#0657b5'
+  imgSong: {
+    width: 40,
+    height: 40,
+    marginRight: 6,
   },
-  imgSong : {
-    marginTop : 10,
-    width : 64,
-    height : 64,
-    borderRadius : 10,
+  nameSong: {
+    color: 'white',
+    fontFamily: fonts.light,
+    fontSize: 16,
+    width: '80%',
   },
-  nameSong : {
-    marginLeft : 80,
-    marginTop : 20,
-    color : '#ffffff',
-    position : 'absolute',
-    fontSize : 16,
-    fontFamily : 'josefin-slab-latin-700-normal',
-  },
-  nameSinger : {
-    marginLeft : 80,
-    marginTop : 50,
-    color : '#ffffff',
-    position : 'absolute',
-    fontSize : 16,
-    fontFamily : 'josefin-slab-latin-700-normal',
-  },
-  change :{
-    //justifyContent : 'center',
-    alignItems : 'center',
-    marginLeft : 220,
-    marginTop : 8,
-    position : 'absolute'
-  },
-  textChange : {
-    marginTop : 25,
-    color : '#474747',
-    fontSize : 16,
-    fontFamily : 'josefin-slab-latin-700-normal',
-    position : 'absolute',
-  },
-  back: {
-    position: 'absolute',
-    top: 20,
-    left: 20,
-  },
+
   backText: {
     color: '#fff',
     fontSize: 16,
@@ -117,15 +86,16 @@ const styles = StyleSheet.create({
   videoContainer: {
     width: '100%',
     height: '100%',
-    justifyContent : 'center',
-    alignItems : 'center',
-    marginTop : 20
-    
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 20,
   },
   video: {
-    width: 463,
-    height: 643,
-    
+    width: videoW,
+    height: videoH,
+    alignSelf: 'center',
+    marginTop: 20,
+    borderWidth: 1,
   },
 });
 

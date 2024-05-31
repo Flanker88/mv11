@@ -53,25 +53,11 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>josefin-slab-latin-100-italic.ttf</string>
-		<string>josefin-slab-latin-100-normal.ttf</string>
-		<string>josefin-slab-latin-200-italic.ttf</string>
-		<string>josefin-slab-latin-200-normal.ttf</string>
-		<string>josefin-slab-latin-300-italic.ttf</string>
-		<string>josefin-slab-latin-300-normal.ttf</string>
-		<string>josefin-slab-latin-400-italic.ttf</string>
-		<string>josefin-slab-latin-400-normal.ttf</string>
-		<string>josefin-slab-latin-500-italic.ttf</string>
-		<string>josefin-slab-latin-500-normal.ttf</string>
-		<string>josefin-slab-latin-600-italic.ttf</string>
-		<string>josefin-slab-latin-600-normal.ttf</string>
-		<string>josefin-slab-latin-700-italic.ttf</string>
-		<string>josefin-slab-latin-700-normal.ttf</string>
-		<string>AkayaKanadaka-Regular.ttf</string>
-		<string>Jua-Regular.ttf</string>
-		<string>Karantina-Bold.ttf</string>
-		<string>Karantina-Light.ttf</string>
-		<string>Karantina-Regular.ttf</string>
+		<string>Inter-Bold.ttf</string>
+		<string>Inter-Light.ttf</string>
+		<string>Inter-Medium.ttf</string>
+		<string>Inter-Regular.ttf</string>
+		<string>Inter-SemiBold.ttf</string>
 	</array>
 </dict>
 </plist>
